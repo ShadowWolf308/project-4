@@ -15,24 +15,25 @@ body{
 
 header{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 2.5fr 4.5fr 1fr;
 }
 
 nav{
     display: flex;
-    column-gap: 1.2em;
+    column-gap: 1em;
     justify-content: space-around;
 }
 nav :hover{
     color: var(--MainColor);
     transition: 0.5s;
+    font-size: 30px;
     
 }
 
 a{
     text-decoration: none;
     color: var(--Wit);
-    font-size: 1.4rem;
+    font-size: 25px;
 }
 
 img{
