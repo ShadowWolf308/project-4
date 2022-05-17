@@ -7,3 +7,34 @@
     --Groen: #285831;
 
 }
+
+body{
+    background-image: url(../images/background.png);
+    background-size: cover;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+nav{
+    display: flex;
+    column-gap: 1.2em;
+    justify-content: space-around;
+}
+nav :hover{
+    color: var(--MainColor);
+    transition: 0.5s;
+    
+}
+
+a{
+    text-decoration: none;
+    color: var(--Wit);
+    font-size: 1.4rem;
+}
+
+img{
+    height: 60px;
+}
