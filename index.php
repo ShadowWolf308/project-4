@@ -36,12 +36,12 @@
         <div></div>
         <img src="images/logo.png" alt="Logo">
         <nav>
-            <a href="">Home</a>
+            <a href="./index.php">Home</a>
             <a href="">Product Info</a>
             <a href="">Kalender</a>
             <a href="">Artiesten</a>   
             <a href="">Aanbiedingen</a>
-            <a href="">Contact</a>
+            <a href="./contact.php">Contact</a>
         </nav>
         <div></div>
     </header>
