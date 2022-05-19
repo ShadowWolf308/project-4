@@ -39,3 +39,9 @@ a{
 img{
     height: 60px;
 }
+
+.blikjes{
+    display: flex;
+    width: 15em;
+    height: 23em;
+}

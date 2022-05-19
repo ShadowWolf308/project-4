@@ -45,6 +45,7 @@
         </nav>
         <div></div>
     </header>
+    <img class="blikjes" src="./images/blink.png" alt="">
     <footer>
         <!--footer data-->
 
