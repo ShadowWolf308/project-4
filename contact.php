@@ -1,3 +1,6 @@
+<?php
+    require("dbconnect.php");
+?>
 <!doctype html>
 <html>
 
@@ -22,7 +25,7 @@
     <meta name="keywords" content="">
 
     <!--website title in tab-->
-    <title></title>
+    <title>contact</title>
 
     <!--linking a .css page-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">
