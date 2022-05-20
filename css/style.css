@@ -21,7 +21,7 @@ body{
 
 header{
     display: grid;
-    grid-template-columns: 1fr 2fr 4.5fr 0fr;
+    grid-template-columns: 0.5fr 2fr 5fr 0.3fr;
     background-color: var(--Groen);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
