@@ -1,5 +1,4 @@
 <?php
-    $error = "";
     if(isset($_POST['submit'])) {
         if(!empty($_POST['naam'] && !empty($_POST['bericht']))) {
             require("dbconnect.php");
@@ -66,9 +65,11 @@
         <div></div>
     </header>
     <form method="POST">
+        <p>Naam:</p>
         <input type="text" id="name" name="naam" required placeholder="vul hier je naam in">
+        <p>Bericht:</p>
         <textarea id="bericht" name="bericht" required placeholder="vul hier je bericht in"></textarea>
-        <input type="submit" name="submit" value="versturen">
+        <input type="submit" name="submit" id="submit" value="versturen">
     </form>
     <footer>
         <!--footer data-->
