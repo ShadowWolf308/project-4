@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+:root {
+    --bgcolor: #28583155;
+    --bgcolorform: #285831de;
+    --color: #ffffff;
+}
+
+form {
+    background-color: var(--bgcolorform);
+    margin-top: calc(40vh - 108px);
+    margin-left: 35vw;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 30vw;
+    border-radius: 15px;
+    padding: 2px 5px;
+}
+
+#bericht {
+    background-color: var(--bgcolor);
+    color: var(--color);
+    height: 20vh;
+    border-radius: 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    resize: none;
+    font-size: 16px;
+    border: solid 2px black;
+}
+
+#name {
+    background-color: var(--bgcolor);
+    color: var(--color);
+    height: 26px;
+    border-radius: 13px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 16px;
+    border: solid 2px black;
+}
+
+#submit {
+    background-color: var(--bgcolor);
+    color: var(--color);
+    width: 8vw;
+    margin-left: 11vw;
+    height: 24px;
+    border-radius: 10px;
+    font-size: 16px;
+    border: solid 2px black;
+}
+
+p {
+    color: var(--color);
+    font-size: 20px;
+}
