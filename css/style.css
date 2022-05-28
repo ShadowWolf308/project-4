@@ -27,24 +27,40 @@ header{
     border-bottom-right-radius: 25px;
 }
 
+img{
+    height: 60px;
+}
+
 nav{
     display: flex;
-    column-gap: 1em;
+    align-items: center;
     justify-content: space-around;
-}
-nav :hover{
-    color: var(--MainColor);
-    transition: 0.5s;
-    font-size: 33px; 
+    column-gap: 1em;
 }
 
 a{
+    position: relative;
     text-decoration: none;
+    font-family: "poppins", sans-serif;
     color: var(--Wit);
-    font-size: 30px;
+    font-size: 25px;
+    padding: 0 10px;
     font-weight: 520;
+
 }
 
-img{
-    height: 60px;
+a::after{
+    content: "";
+    position: absolute;
+    background-color: var(--MainColor);
+    height: 3px;
+    width: 0%;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+
+a:hover:after{
+    width: 100%;
+
 }
