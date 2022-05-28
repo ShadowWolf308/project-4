@@ -22,7 +22,7 @@ body{
 header{
     display: grid;
     grid-template-columns: 0.5fr 2fr 5fr 0.3fr;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
@@ -45,7 +45,7 @@ a{
     color: var(--Wit);
     font-size: 25px;
     padding: 0 10px;
-    font-weight: 520;
+    font-weight: bold;
 
 }
 
@@ -62,5 +62,8 @@ a::after{
 
 a:hover:after{
     width: 100%;
+}
 
+a:hover{
+    color: var(--MainColor);
 }
