@@ -22,7 +22,7 @@ body{
 header{
     display: grid;
     grid-template-columns: 0.5fr 2fr 5fr 0.3fr;
-    background-color: var(--Groen);
+    background-color: rgba(0, 0, 0, 0.5);
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 }
