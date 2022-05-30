@@ -1,5 +1,10 @@
 @charset "utf-8";
 
+@font-face {
+    font-family: 'copperplate';
+    src: url(../fonts/OPTICopperplate.otf);
+}
+
 :root{
     --MainColor: #EF7123;
     --Wit: #ffffff;
@@ -9,7 +14,7 @@
 }
 
 *{
-    font-family: "Poppins", sans-serif;
+    font-family: "copperplate";
     margin: 0;
     padding: 0;
 }
@@ -41,7 +46,6 @@ nav{
 a{
     position: relative;
     text-decoration: none;
-    font-family: "poppins", sans-serif;
     color: var(--Wit);
     font-size: 20px;
     padding: 0 10px;
