@@ -46,7 +46,8 @@
         <div></div>
     </header>
     <article class= "text1">
-    
+    <h1>aanbieding van de week</h1>
+    <p>2+1 Gratis</p>
     </article>
     
 
