@@ -28,8 +28,6 @@ header{
     display: grid;
     grid-template-columns: 0.5fr 2fr 5fr 0.3fr;
     background-color: rgba(0, 0, 0, 0.6);
-    /* border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px; */
 }
 
 img{
@@ -47,7 +45,7 @@ a{
     position: relative;
     text-decoration: none;
     color: var(--Wit);
-    font-size: 20px;
+    font-size: 18px;
     padding: 0 10px;
     font-weight: bold;
 
