@@ -61,7 +61,7 @@
             <a href="">Artiesten</a>   
             <a href="">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
-            <a href="">Registreren</a>
+            <a href="./registreren.php">Registreren</a>
         </nav>
         <div></div>
     </header>
