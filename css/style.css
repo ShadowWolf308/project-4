@@ -12,7 +12,7 @@
     --Groen: #285831;
 
 }
-
+/* <---------Alles voor de header---------> */
 *{
     font-family: "copperplate";
     margin: 0;
@@ -68,4 +68,18 @@ a:hover:after{
 
 a:hover{
     color: var(--MainColor);
+}
+/* <---------Eind Header---------> */
+
+/* <---------Alles voor body (text)---------> */
+
+.text1{
+    display: flex;
+    color: var(--MainColor);
+    flex-direction: column;
+    row-gap: 30em;
+}
+.text1 p ,.text1 h1 {
+    text-align: center;
+    font-size: 1.7em;
 }
