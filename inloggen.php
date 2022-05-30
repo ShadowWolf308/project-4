@@ -1,20 +1,21 @@
 <?php
     $error = "";
-
     if (isset($_POST['submit'])) {
         if (!empty($_POST['username']) && !empty($_POST['password'])) {
     
             require("dbconnect.php");
     
-            $sql = "SELECT * FROM gebruikers WHERE username = '".$_POST['username']."' AND password = '".$_POST['password']."'";
+            $sql = "SELECT * FROM gebruikers WHERE username = '".trim($_POST['username'])."' AND password = '".trim($_POST['password'])."'";
     
             if ($result = $conn->query($sql)) {
                 $aantal = $result->num_rows;
                 if ($aantal == 1) {
+                    $row = $result->fetch_assoc();
                     session_start();
                     $_SESSION['ingelogd'] = true;
                     $_SESSION['username'] = $_POST['username'];
-                    header("location: ingelogd.php");
+                    $_SESSION['id'] = (integer)$row['gebruiker_id'];
+                    // header("location: ingelogd.php");
                 } else {
                     $error = "niet de juiste gegevens ingevuld";
                 }
