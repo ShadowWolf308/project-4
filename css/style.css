@@ -23,8 +23,8 @@ header{
     display: grid;
     grid-template-columns: 0.5fr 2fr 5fr 0.3fr;
     background-color: rgba(0, 0, 0, 0.6);
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    /* border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; */
 }
 
 img{
