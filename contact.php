@@ -9,7 +9,7 @@
                     die("Error: " . $sql . "<br>" . $conn->error);
                 }
             } else {
-                $sql = "INSERT INTO contact (gebruiker_id,naam,bericht) VALUES ('".$_SESSION['id']."','".trim($_POST['naam'])."','".trim($_POST['bericht'])."')";
+                $sql = "INSERT INTO contact (gebruiker_id,naam,bericht) VALUES (".$_SESSION['id'].",'".trim($_POST['naam'])."','".trim($_POST['bericht'])."')";
                 if ($conn->query($sql) === false) {
                     die("Error: " . $sql . "<br>" . $conn->error);
                 }
