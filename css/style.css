@@ -26,7 +26,7 @@ body{
 
 header{
     display: grid;
-    grid-template-columns: 0.5fr 2fr 5fr 0.3fr;
+    grid-template-columns: 0.2fr 2fr 5.5fr 0.2fr;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -45,7 +45,7 @@ a{
     position: relative;
     text-decoration: none;
     color: var(--Wit);
-    font-size: 18px;
+    font-size: 14px;
     padding: 0 10px;
     font-weight: bold;
 
