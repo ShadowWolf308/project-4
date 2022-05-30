@@ -1,4 +1,12 @@
-<!doctype html>
+<?php
+session_start();
+
+ if ($_SESSION['ingelogd'] != true) {
+     header("location: inloggen.php");
+ }
+
+?>
+
 <html>
 
 <head>
@@ -41,15 +49,11 @@
             <a href="">Artiesten</a>   
             <a href="">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
-            <a href="./registreren.php">Registreren</a>
+            <a href="">Registreren</a>
         </nav>
         <div></div>
     </header>
-    <article class= "text1">
-    <h1>aanbieding van de week</h1>
-    <p>2+1 Gratis</p>
-    </article>
-    
+
 
     <footer>
         <!--footer data-->
