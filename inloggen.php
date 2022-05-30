@@ -15,7 +15,7 @@
                     $_SESSION['ingelogd'] = true;
                     $_SESSION['username'] = $_POST['username'];
                     $_SESSION['id'] = (integer)$row['gebruiker_id'];
-                    // header("location: ingelogd.php");
+                    header("location: ingelogd.php");
                 } else {
                     $error = "niet de juiste gegevens ingevuld";
                 }
