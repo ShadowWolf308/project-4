@@ -45,8 +45,6 @@
         </nav>
         <div></div>
     </header>
-    
-
     <footer>
         <!--footer data-->
 
