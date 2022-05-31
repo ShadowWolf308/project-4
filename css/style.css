@@ -71,15 +71,42 @@ a:hover{
 }
 /* <---------Eind Header---------> */
 
-/* <---------Alles voor body (text)---------> */
+/* <---------Alles voor aanbieding (text)---------> */
 
 .text1{
     display: flex;
     color: var(--MainColor);
     flex-direction: column;
-    row-gap: 30em;
+    row-gap: 65vh;
+    margin-top: 5vh;
 }
+
+
 .text1 p ,.text1 h1 {
     text-align: center;
     font-size: 1.7em;
 }
+
+.text1 h1, p {
+	-webkit-animation: glow 2s ease-in-out infinite alternate;
+	-moz-animation: glow 2s ease-in-out infinite alternate;
+	animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+	from {
+		color: #fff;
+		text-shadow: 0 0 10px var(--MainColor), 0 0 20px var(--MainColor), 0 0 30px var(--MainColor),
+			0 0 40px var(--MainColor), 0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor),
+			0 0 90px var(--MainColor);
+	}
+
+	to {
+		color: white;
+		text-shadow: 0 0 20px var(--MainColor), 0 0 30px var(--MainColor), 0 0 40px var(--MainColor),
+			0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor), 0 0 80px var(--MainColor),
+			0 1 90px var(--MainColor);
+	}
+}
+
+/* <---------Alles voor aanbieding (text)---------> */
