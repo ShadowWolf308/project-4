@@ -86,7 +86,7 @@ a:hover{
     font-size: 1.7em;
 }
 
-.text1 h1, p {
+.text1 h1, .text1 p, .text2 h1 {
 	-webkit-animation: glow 2s ease-in-out infinite alternate;
 	-moz-animation: glow 2s ease-in-out infinite alternate;
 	animation: glow 2s ease-in-out infinite alternate;
@@ -109,3 +109,8 @@ a:hover{
 }
 
 /* <---------Alles voor aanbieding (text)---------> */
+
+/* .text2{
+    display: flex;
+} */
+
