@@ -20,7 +20,7 @@
 }
 
 body{
-    background-image: url(../images/background2.png);
+    background-image: url(../images/tiger background.png);
     background-size: cover;
 }
 
@@ -73,13 +73,3 @@ a:hover{
 
 /* <---------Alles voor body (text)---------> */
 
-.text1{
-    display: flex;
-    color: var(--MainColor);
-    flex-direction: column;
-    row-gap: 30em;
-}
-.text1 p ,.text1 h1 {
-    text-align: center;
-    font-size: 1.7em;
-}
