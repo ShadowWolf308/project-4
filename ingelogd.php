@@ -44,7 +44,6 @@ session_start();
         <img src="images/logo.png" alt="Logo">
         <nav>
             <?php
-            session_start();
                 if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
                     echo '<a href="./ingelogd.php">Home</a>';
                 } else {
