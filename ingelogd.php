@@ -1,9 +1,9 @@
 <?php
 session_start();
 
- if ($_SESSION['ingelogd'] != true) {
-     header("location: inloggen.php");
- }
+// if ($_SESSION['ingelogd'] != true) {
+  //   header("location: inloggen.php");
+ //}
 
 ?>
 
@@ -33,7 +33,7 @@ session_start();
     <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="./css/ingelogd.CSS">
 </head>
 
 <body>
@@ -60,6 +60,15 @@ session_start();
         <div></div>
     </header>
 
+    
+    <h1 class="echoname">
+    <?php
+
+    $username = $_SESSION['username'];
+
+    echo "Welkom", " ", $username;
+    ?>
+    </h1>
 
     <footer>
         <!--footer data-->
