@@ -71,46 +71,27 @@ a:hover{
 }
 /* <---------Eind Header---------> */
 
-/* <---------Alles voor aanbieding (text)---------> */
+/* <---------Alles voor body (text)---------> */
 
 .text1{
     display: flex;
+    color: var(--MainColor);
     flex-direction: column;
-    row-gap: 60vh;
-    margin-top: 5vh;
+    row-gap: 30em;
 }
-
-
 .text1 p ,.text1 h1 {
     text-align: center;
     font-size: 1.7em;
 }
 
-.text1 h1, .text1 p, .text2 h1 {
-	-webkit-animation: glow 2s ease-in-out infinite alternate;
-	-moz-animation: glow 2s ease-in-out infinite alternate;
-	animation: glow 2s ease-in-out infinite alternate;
-}
-
-@keyframes glow {
-	from {
-		color: var(--Wit);
-		text-shadow: 0 0 10px var(--MainColor), 0 0 20px var(--MainColor), 0 0 30px var(--MainColor),
-			0 0 40px var(--MainColor), 0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor),
-			0 0 90px var(--MainColor);
-	}
-
-	to {
-		color: var(--Wit);
-		text-shadow: 0 0 20px var(--MainColor), 0 0 30px var(--MainColor), 0 0 40px var(--MainColor),
-			0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor), 0 0 80px var(--MainColor),
-			0 1 90px var(--MainColor);
-	}
-}
-
-/* <---------Alles voor aanbieding (text)---------> */
-
-.text2{
-    display: flex;
-    color: var(--Wit);
+h1{
+    color: #ffffff;
+    position: absolute;
+    margin-left: 35%;
+    margin-top: 7%;
+    background-color: #EF7123;
+    width: 25vw;
+    padding-left: 3vw ;
+    padding-bottom: 60vh;
+    border-radius: 4vw;
 }
