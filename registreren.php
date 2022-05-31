@@ -9,7 +9,6 @@
                     $aantal = $result->num_rows;
                     if ($aantal == 0) {
                     $sql = "INSERT INTO gebruikers (username,password,permission) VALUES ('".trim($_POST['username'])."','".trim($_POST['password'])."','1')";
-            
                     if ($result = $conn->query($sql)) {
                         $sql = "SELECT * FROM gebruikers WHERE username = '".trim($_POST['username'])."' AND password = '".trim($_POST['password'])."'";
                         if ($result = $conn->query($sql)) {
@@ -73,7 +72,14 @@
         <div></div>
         <img src="images/logo.png" alt="Logo">
         <nav>
-            <a href="./index.php">Home</a>
+            <?php
+            session_start();
+                if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
+                    echo '<a href="./ingelogd.php">Home</a>';
+                } else {
+                    echo '<a href="./index.php">Home</a>';
+                }
+            ?>
             <a href="">Product Info</a>
             <a href="">Kalender</a>
             <a href="">Artiesten</a>   

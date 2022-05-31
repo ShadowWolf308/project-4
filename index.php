@@ -35,7 +35,14 @@
         <div></div>
         <img src="images/logo.png" alt="Logo">
         <nav>
-            <a href="./index.php">Home</a>
+            <?php
+            session_start();
+                if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
+                    echo '<a href="./ingelogd.php">Home</a>';
+                } else {
+                    echo '<a href="./index.php">Home</a>';
+                }
+            ?>
             <a href="">Product Info</a>
             <a href="">Kalender</a>
             <a href="">Artiesten</a>   
