@@ -74,7 +74,7 @@ a:hover{
 /* <---------Eind Header---------> */
 
 form {
-    background-color: var(--bgcolorform);
+    background-color: var(--Groen);
     margin-top: calc(40vh - 108px);
     margin-left: 35vw;
     display: flex;
@@ -86,7 +86,7 @@ form {
 }
 
 #bericht {
-    background-color: var(--bgcolor);
+    background-color: var(--Wit);
     color: var(--color);
     height: 20vh;
     border-radius: 10px;
@@ -98,7 +98,7 @@ form {
 }
 
 #name {
-    background-color: var(--bgcolor);
+    background-color: var(--Wit);
     color: var(--color);
     height: 26px;
     border-radius: 13px;
@@ -109,7 +109,7 @@ form {
 }
 
 #submit {
-    background-color: var(--bgcolor);
+    background-color: var(--MainColor);
     color: var(--color);
     width: 8vw;
     margin-left: 11vw;
