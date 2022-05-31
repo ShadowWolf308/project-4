@@ -77,7 +77,7 @@
             <a href="">Product Info</a>
             <a href="">Kalender</a>
             <a href="">Artiesten</a>   
-            <a href="">Aanbiedingen</a>
+            <a href="./Aanbiedingen.php">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
             <a href="./registreren.php">Registreren</a>
         </nav>
