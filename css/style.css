@@ -110,7 +110,7 @@ a:hover{
 
 /* <---------Alles voor aanbieding (text)---------> */
 
-/* .text2{
+.text2{
     display: flex;
-} */
-
+    color: var(--Wit);
+}

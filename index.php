@@ -57,7 +57,7 @@
     <p>2+1 Gratis</p>
     </article>
 
-    <!-- <article class= "text2">
+    <article class= "text2">
     <h1>Welkom!</h1>
     <p>Welkom op de homepagina van Tiger Energy,
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -66,7 +66,7 @@
     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
     It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
     publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p> -->
+    </p>
     </article>
 
     <footer>
