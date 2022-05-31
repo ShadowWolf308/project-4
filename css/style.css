@@ -75,9 +75,8 @@ a:hover{
 
 .text1{
     display: flex;
-    color: var(--MainColor);
     flex-direction: column;
-    row-gap: 65vh;
+    row-gap: 60vh;
     margin-top: 5vh;
 }
 
@@ -95,14 +94,14 @@ a:hover{
 
 @keyframes glow {
 	from {
-		color: #fff;
+		color: var(--Wit);
 		text-shadow: 0 0 10px var(--MainColor), 0 0 20px var(--MainColor), 0 0 30px var(--MainColor),
 			0 0 40px var(--MainColor), 0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor),
 			0 0 90px var(--MainColor);
 	}
 
 	to {
-		color: white;
+		color: var(--Wit);
 		text-shadow: 0 0 20px var(--MainColor), 0 0 30px var(--MainColor), 0 0 40px var(--MainColor),
 			0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor), 0 0 80px var(--MainColor),
 			0 1 90px var(--MainColor);
