@@ -20,7 +20,7 @@
 }
 
 body{
-    background-image: url(../images/background2.png);
+    background-image: url(../images/tiger_background.png);
     background-size: cover;
 }
 
@@ -89,7 +89,7 @@ h1{
     position: absolute;
     margin-left: 35%;
     margin-top: 7%;
-    background-color: #e8840077;
+    background-color: #e8840080;
     width: 25vw;
     padding-left: 3vw ;
     padding-bottom: 60vh;
