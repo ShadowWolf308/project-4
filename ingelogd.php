@@ -60,15 +60,27 @@ session_start();
         <div></div>
     </header>
 
-    
+   
     <h1 class="echoname">
     <?php
-
-    $username = $_SESSION['username'];
-
-    echo "Welkom", " ", $username;
+    echo "Welkom ".$_SESSION['username'];
     ?>
     </h1>
+    <div class="box">
+	<a class="button" href="#popup1">Toon uw persoonlijke aanbieding</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+    Uw persoonlijke aanbieding is toegevoegd aan uw winkelmandje
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+        <img id="imgblik" src="./images/blink.png" alt="blikje">
+            <button id="mandje"> Ga naar winkelmandje </button>
+		</div>
+	</div>
+</div>
+    
 
     <footer>
         <!--footer data-->
