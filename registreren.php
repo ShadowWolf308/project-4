@@ -53,13 +53,13 @@
     <meta name="description" content="">
 
     <!--author data-->
-    <meta name="author" content="Levy van der Valk">
+    <meta name="author" content="Tom Diede Levy Ryan">
 
     <!--search words for google-->
     <meta name="keywords" content="">
 
     <!--website title in tab-->
-    <title>contact</title>
+    <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
     <link rel="stylesheet" type="text/css" href="./css/style.css">

@@ -55,32 +55,44 @@
     <section>
         <table>
             <tr>
-                <th>Naam van de artiest</th>
-                <th>Plaats van evenement</th>
-                <th>Datum van het evenement</th>
+                <th>Naam</th>
+                <th>Achternaam</th>
+                <th>Voornaam</th>
+                <th>Tussenvoegsel</th>
+                <th>Statement</th>
+                <th>Telefoon Nummer</th>
+                <th>Actief of niet</th>
             </tr>
             <?php
             require('dbconnect.php');
-            $sql = "SELECT * FROM evenementen";
+            $sql = "SELECT * FROM artiesten";
             if ($result = $conn->query($sql)) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<tr>";
-                    $sql = "SELECT * FROM artiesten WHERE artiest_id = ".$row['artiest_id'];
-                    if($result2 = $conn->query($sql)) {
-                        $row2 = $result2->fetch_assoc();
-                        echo "<td>";
-                        echo $row2['naam'];
-                        echo "</td>";
-                    }
-                    $sql = "SELECT* FROM locaties WHERE locatie_id = ".$row['locatie_id'];
-                    if($result2 = $conn->query($sql)){
-                        $row2 = $result2->fetch_assoc();
-                        echo "<td>";
-                        echo $row2['plaatsnaam']."<br>".$row2['gebouw'];
-                        echo "</td>";
-                    }
                     echo "<td>";
-                    echo $row['datum'];
+                    echo $row['naam'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['achternaam'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['voornaam'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['tussenvoegsel'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['statement'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['telefoon'];
+                    echo "</td>";
+                    echo "<td>";
+                    if ($row['actief'] == 1) {
+                        echo "wel actief";
+                    } else if ($row['actief'] == 0) {
+                        echo "niet actief";
+                    }
                     echo "</td>";
                     echo "</tr>";
                 }

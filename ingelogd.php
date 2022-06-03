@@ -24,7 +24,7 @@ session_start();
     <meta name="description" content="Website TIGER">
 
     <!--author data-->
-    <meta name="author" content="Tom_Diede_Levy_Ryan">
+    <meta name="author" content="Tom Diede Levy Ryan">
 
     <!--search words for google-->
     <meta name="keywords" content="">
