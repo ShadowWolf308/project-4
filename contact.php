@@ -62,7 +62,7 @@
                     echo '<a href="./index.php">Home</a>';
                 }
             ?>
-            <a href="">Product Info</a>
+            <a href="./producten.php">Product Info</a>
             <a href="./kalender.php">Kalender</a>
             <a href="./artiesten.php">Artiesten</a>   
             <a href="./Aanbiedingen.php">Aanbiedingen</a>

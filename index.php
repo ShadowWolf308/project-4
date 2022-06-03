@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
+    header('location: ingelogd.php');
+}
+?>
 <!doctype html>
 <html>
 
@@ -25,7 +31,7 @@
     <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 
 <body>
@@ -36,14 +42,13 @@
         <img src="images/logo.png" alt="Logo">
         <nav>
             <?php
-            session_start();
                 if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
                     echo '<a href="./ingelogd.php">Home</a>';
                 } else {
                     echo '<a href="./index.php">Home</a>';
                 }
             ?>
-            <a href="">Product Info</a>
+            <a href="./producten.php">Product Info</a>
             <a href="./kalender.php">Kalender</a>
             <a href="./artiesten.php">Artiesten</a>   
             <a href="./Aanbiedingen.php">Aanbiedingen</a>
