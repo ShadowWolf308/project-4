@@ -59,7 +59,7 @@
             if ($result = $conn->query($sql)) {
                 while ($row = $result->fetch_assoc()) {
                     echo "<article style='display:grid;'>";
-                    echo "<img src='".$row['afbeelding']."' alt''>";
+                    echo "<img src='./images/".$row['afbeelding']."' alt''>";
                     echo "<p>";
                     echo $row['titel'];
                     echo "</p>";
