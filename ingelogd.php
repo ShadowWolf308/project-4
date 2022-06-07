@@ -1,10 +1,17 @@
 <?php
 session_start();
-
 // if ($_SESSION['ingelogd'] != true) {
   //   header("location: inloggen.php");
  //}
-
+$error = ""
+if(isset($_POST['submit'])) {
+    require('dbconnect.php');
+    if ($_POST['WWoud'] == ) {
+        
+    }else{
+        $error = "wachtwoord onjuist";
+    }
+}
 ?>
 
 <html>
@@ -88,14 +95,15 @@ session_start();
             <div class="content">
                 <form method="POST">
                     <label for="Username">Gebruikersnaam:</label><br>
-                    <input type="text" id="Username" name="Username"><br>
+                    <input type="text" id="Username" name="Username" required><br>
                     <label for="Wachtwoord">Uw Oude Wachtwoord:</label><br>
-                    <input type="password" id="Wachtwoord" name="WWoud"><br>
+                    <input type="password" id="Wachtwoord" name="WWoud" required><br>
                     <label for="Wachtwoord">Uw Nieuwe Wachtwoord:</label><br>
-                    <input type="password" id="Wachtwoord" name="WWnieuw"><br>
+                    <input type="password" id="Wachtwoord" name="WWnieuw" required><br>
                     <label for="Wachtwoord">Herhaal uw Nieuwe wachtwoord:</label><br>
-                    <input type="password" id="Wachtwoord" name="WWherhaal"> <br> <br>
+                    <input type="password" id="Wachtwoord" name="WWherhaal" required> <br> <br>
                     <input type="submit" value="Aanpassen" name="submit">
+                    <?php echo $error ?>
                 </form>
             </div>
         </div>
