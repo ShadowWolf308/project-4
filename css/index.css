@@ -22,7 +22,7 @@
 }
 
 html{
-    background-image: url(../images/tiger_background.png);
+    background-image: url(../images/background2.png);
     background-size: cover;
 }
 
@@ -112,6 +112,12 @@ a:hover{
 /* <---------Alles voor aanbieding (text)---------> */
 
 .text2{
-    display: flex;
+    position: absolute;
+    padding: 1.2em;
     color: var(--Wit);
+    width: 400px;
+    top: 20em;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
 }

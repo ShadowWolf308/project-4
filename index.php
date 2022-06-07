@@ -63,16 +63,12 @@ if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
     </article>
 
     <article class= "text2">
-    <h1>Welkom!</h1>
-    <p>Welkom op de homepagina van Tiger Energy,
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    <h1>Welkom!</h1><br>
+    <p>Welkom op de homepagina van Tiger Energy, ons bedrijf is begonnen met het maken van energy in 2010 toen de wereld toe was aan een nieuwe unieke energydrank beleving.<br>
+
     </p>
     </article>
+
 
     <footer>
         <!--footer data-->
@@ -83,3 +79,5 @@ if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
 </body>
 
 </html>
+
+
