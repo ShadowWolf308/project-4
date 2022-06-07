@@ -101,7 +101,7 @@ session_start();
         </div>
     </div>
     <script>
-    var copy = ""
+    var copy = "";
     function makeid(length) {
         var result = '';
         var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -111,10 +111,11 @@ session_start();
         }
         document.getElementById('text').innerHTML=result;
         copy = result;
-    }makeid(7)
+    }
+    makeid(7);
     document.getElementById('mandje').addEventListener('click',function() {
     navigator.clipboard.writeText(copy);
-    alert('Uw code is gekopieerd.')
+    alert('Uw code is gekopieerd.');
     });
     </script>
     <footer>
