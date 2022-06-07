@@ -1,30 +1,3 @@
-<?php
-    $error = "";
-    if (isset($_POST['submit'])) {
-        if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    
-            require("dbconnect.php");
-    
-            $sql = "SELECT * FROM gebruikers WHERE username = '".trim($_POST['username'])."' AND password = '".trim($_POST['password'])."'";
-    
-            if ($result = $conn->query($sql)) {
-                $aantal = $result->num_rows;
-                if ($aantal == 1) {
-                    $row = $result->fetch_assoc();
-                    session_start();
-                    $_SESSION['ingelogd'] = true;
-                    $_SESSION['username'] = trim($_POST['username']);
-                    $_SESSION['id'] = (integer)$row['gebruiker_id'];
-                    header("location: ingelogd.php");
-                } else {
-                    $error = "niet de juiste gegevens ingevuld";
-                }
-            } 
-        } else {
-            $error = "vul de velden in";
-        }
-    }
-?>
 <!doctype html>
 <html>
 
@@ -40,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--website description-->
-    <meta name="description" content="">
+    <meta name="description" content="Website TIGER">
 
     <!--author data-->
     <meta name="author" content="Tom Diede Levy Ryan">
@@ -52,7 +25,7 @@
     <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="./css/inloggen.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 
 <body>
@@ -73,19 +46,50 @@
             <a href="./producten.php">Product Info</a>
             <a href="./kalender.php">Kalender</a>
             <a href="./artiesten.php">Artiesten</a>   
-            <a href="./aanbiedingen.php">Aanbiedingen</a>
+            <a href="./Aanbiedingen.php">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
             <a href="./registreren.php">Registreren</a>
         </nav>
         <div></div>
     </header>
-    <form method="POST">
-        <input type="text" name="username" required placeholder="vul hier je username in">
-        <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
-        <input type="submit" value="log in" name="submit">
-    </form>
-    <p>Nog geen account</p>
-    <a href="registreren.php">Maak een account aan</a>
+    <table>
+        <tr>
+            <th></th>
+            <th>Smaak</th>
+            <th>Welk evenement/datum verkrijgbaar</th>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td>Peach</td>
+            <td>Verkrijgbaar op elke evenement</td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td>Pineapple</td>
+            <td>Verkrijgbaar op evenementen tussen 2021-03-01 en 2021-04-01</td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td>Lime</td>
+            <td>Verkrijgbaar op evenementen tussen 2021-03-15 en 2021-03-31</td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td>Grape</td>
+            <td>Verkrijgbaar op het evenement op 2021-03-01</td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td>Watermelon</td>
+            <td>Verkrijgbaar op evenementen tussen 2021-04-01 en 2021-04-13</td>
+        </tr>
+        <tr>
+            <td><img src="" alt=""></td>
+            <td>Frost Special</td>
+            <td>Verkrijgbaar op het evenement op 2021-04-01</td>
+        </tr>
+    </table>
+
     <footer>
         <!--footer data-->
 

@@ -72,54 +72,46 @@ a:hover{
     color: var(--MainColor);
 }
 /* <---------Eind Header---------> */
+/* <---------Alles voor aanbieding (text)---------> */
 
-form {
-    background-color: var(--Groen);
-    margin-top: calc(40vh - 108px);
-    margin-left: 35vw;
+.text1{
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-    width: 30vw;
-    border-radius: 15px;
-    padding: 2px 5px;
+    row-gap: 60vh;
+    margin-top: 5vh;
 }
 
-#bericht {
-    background-color: var(--Wit);
-    color: var(--color);
-    height: 20vh;
-    border-radius: 10px;
-    padding-left: 8px;
-    padding-right: 8px;
-    resize: none;
-    font-size: 16px;
-    border: solid 2px black;
+
+.text1 p ,.text1 h1 {
+    text-align: center;
+    font-size: 1.7em;
 }
 
-#name {
-    background-color: var(--Wit);
-    color: var(--color);
-    height: 26px;
-    border-radius: 13px;
-    padding-left: 8px;
-    padding-right: 8px;
-    font-size: 16px;
-    border: solid 2px black;
+.text1 h1, .text1 p, .text2 h1 {
+	-webkit-animation: glow 2s ease-in-out infinite alternate;
+	-moz-animation: glow 2s ease-in-out infinite alternate;
+	animation: glow 2s ease-in-out infinite alternate;
 }
 
-#submit {
-    background-color: var(--MainColor);
-    color: var(--color);
-    width: 8vw;
-    margin-left: 11vw;
-    height: 24px;
-    border-radius: 10px;
-    font-size: 16px;
-    border: solid 2px black;
+@keyframes glow {
+	from {
+		color: var(--Wit);
+		text-shadow: 0 0 10px var(--MainColor), 0 0 20px var(--MainColor), 0 0 30px var(--MainColor),
+			0 0 40px var(--MainColor), 0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor),
+			0 0 90px var(--MainColor);
+	}
+
+	to {
+		color: var(--Wit);
+		text-shadow: 0 0 20px var(--MainColor), 0 0 30px var(--MainColor), 0 0 40px var(--MainColor),
+			0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor), 0 0 80px var(--MainColor),
+			0 1 90px var(--MainColor);
+	}
 }
 
-p {
-    color: var(--color);
-    font-size: 20px;
+/* <---------Alles voor aanbieding (text)---------> */
+
+.text2{
+    display: flex;
+    color: var(--Wit);
 }

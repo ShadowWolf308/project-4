@@ -1,3 +1,9 @@
+<?php
+session_start();
+if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
+    header('location: ingelogd.php');
+}
+?>
 <!doctype html>
 <html>
 
@@ -16,7 +22,7 @@
     <meta name="description" content="Website TIGER">
 
     <!--author data-->
-    <meta name="author" content="Tom_Diede_Levy_Ryan">
+    <meta name="author" content="Tom Diede Levy Ryan">
 
     <!--search words for google-->
     <meta name="keywords" content="">
@@ -25,7 +31,7 @@
     <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
 </head>
 
 <body>
@@ -36,16 +42,15 @@
         <img src="images/logo.png" alt="Logo">
         <nav>
             <?php
-            session_start();
                 if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
                     echo '<a href="./ingelogd.php">Home</a>';
                 } else {
                     echo '<a href="./index.php">Home</a>';
                 }
             ?>
-            <a href="">Product Info</a>
-            <a href="">Kalender</a>
-            <a href="">Artiesten</a>   
+            <a href="./producten.php">Product Info</a>
+            <a href="./kalender.php">Kalender</a>
+            <a href="./artiesten.php">Artiesten</a>   
             <a href="./Aanbiedingen.php">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
             <a href="./registreren.php">Registreren</a>

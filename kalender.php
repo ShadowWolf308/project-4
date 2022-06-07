@@ -1,31 +1,3 @@
-<?php
-    $error = "";
-    if (isset($_POST['submit'])) {
-        if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    
-            require("dbconnect.php");
-    
-            $sql = "SELECT * FROM gebruikers WHERE username = '".trim($_POST['username'])."' AND password = '".trim($_POST['password'])."'";
-    
-            if ($result = $conn->query($sql)) {
-                $aantal = $result->num_rows;
-                if ($aantal == 1) {
-                    $row = $result->fetch_assoc();
-                    session_start();
-                    $_SESSION['ingelogd'] = true;
-                    $_SESSION['username'] = trim($_POST['username']);
-                    $_SESSION['id'] = (integer)$row['gebruiker_id'];
-                    header("location: ingelogd.php");
-                } else {
-                    $error = "niet de juiste gegevens ingevuld";
-                }
-            } 
-        } else {
-            $error = "vul de velden in";
-        }
-    }
-?>
-<!doctype html>
 <html>
 
 <head>
@@ -40,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!--website description-->
-    <meta name="description" content="">
+    <meta name="description" content="Website TIGER">
 
     <!--author data-->
     <meta name="author" content="Tom Diede Levy Ryan">
@@ -52,7 +24,7 @@
     <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="./css/inloggen.css">
+    <link rel="stylesheet" type="text/css" href="css/kalender.css">
 </head>
 
 <body>
@@ -79,13 +51,45 @@
         </nav>
         <div></div>
     </header>
-    <form method="POST">
-        <input type="text" name="username" required placeholder="vul hier je username in">
-        <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
-        <input type="submit" value="log in" name="submit">
-    </form>
-    <p>Nog geen account</p>
-    <a href="registreren.php">Maak een account aan</a>
+
+    <section>
+        <table>
+            <tr>
+                <th>Naam van de artiest</th>
+                <th>Plaats van evenement</th>
+                <th>Datum van het evenement</th>
+            </tr>
+            <?php
+            require('dbconnect.php');
+            $sql = "SELECT * FROM evenementen";
+            if ($result = $conn->query($sql)) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    $sql = "SELECT * FROM artiesten WHERE artiest_id = ".$row['artiest_id'];
+                    if($result2 = $conn->query($sql)) {
+                        $row2 = $result2->fetch_assoc();
+                        echo "<td>";
+                        echo $row2['naam'];
+                        echo "</td>";
+                    }
+                    $sql = "SELECT* FROM locaties WHERE locatie_id = ".$row['locatie_id'];
+                    if($result2 = $conn->query($sql)){
+                        $row2 = $result2->fetch_assoc();
+                        echo "<td>";
+                        echo $row2['plaatsnaam']."<br>".$row2['gebouw'];
+                        echo "</td>";
+                    }
+                    echo "<td>";
+                    echo $row['datum'];
+                    echo "</td>";
+                    echo "</tr>";
+                }
+                
+            }
+            ?>
+        </table>
+    </section>
+
     <footer>
         <!--footer data-->
 

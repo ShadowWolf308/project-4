@@ -53,16 +53,16 @@
     <meta name="description" content="">
 
     <!--author data-->
-    <meta name="author" content="Levy van der Valk">
+    <meta name="author" content="Tom Diede Levy Ryan">
 
     <!--search words for google-->
     <meta name="keywords" content="">
 
     <!--website title in tab-->
-    <title>contact</title>
+    <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/registreren.css">
 </head>
 
 <body>
@@ -80,9 +80,9 @@
                     echo '<a href="./index.php">Home</a>';
                 }
             ?>
-            <a href="">Product Info</a>
-            <a href="">Kalender</a>
-            <a href="">Artiesten</a>   
+            <a href="./producten.php">Product Info</a>
+            <a href="./kalender.php">Kalender</a>
+            <a href="./artiesten.php">Artiesten</a>   
             <a href="./Aanbiedingen.php">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
             <a href="./registreren.php">Registreren</a>
@@ -95,6 +95,8 @@
         <input type="password" name="passwordcheck" required placeholder="vul hier je wachtwoord nog een keer in">
         <input type="submit" value="registreer" name="submit">
     </form>
+    <p>Heb je al een account?</p>
+    <a href="inloggen.php">Log In</a>
     <footer>
         <!--footer data-->
 

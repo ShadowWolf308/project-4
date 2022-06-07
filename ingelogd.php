@@ -24,7 +24,7 @@ session_start();
     <meta name="description" content="Website TIGER">
 
     <!--author data-->
-    <meta name="author" content="Tom_Diede_Levy_Ryan">
+    <meta name="author" content="Tom Diede Levy Ryan">
 
     <!--search words for google-->
     <meta name="keywords" content="">
@@ -50,25 +50,37 @@ session_start();
                     echo '<a href="./index.php">Home</a>';
                 }
             ?>
-            <a href="">Product Info</a>
-            <a href="">Kalender</a>
-            <a href="">Artiesten</a>   
-            <a href="">Aanbiedingen</a>
+            <a href="./producten.php">Product Info</a>
+            <a href="./kalender.php">Kalender</a>
+            <a href="./artiesten.php">Artiesten</a>
+            <a href="./aanbiedingen.php">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
             <a href="./registreren.php">Registreren</a>
         </nav>
         <div></div>
     </header>
 
-    
+   
     <h1 class="echoname">
     <?php
-
-    $username = $_SESSION['username'];
-
-    echo "Welkom", " ", $username;
+    echo "Welkom ".$_SESSION['username'];
     ?>
     </h1>
+    <div class="box">
+	<a class="button" href="#popup1">Toon uw persoonlijke aanbieding</a>
+</div>
+
+<div id="popup1" class="overlay">
+	<div class="popup">
+    Uw persoonlijke aanbieding is toegevoegd aan uw winkelmandje
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+        <img id="imgblik" src="./images/blink.png" alt="blikje">
+            <button id="mandje"> Ga naar winkelmandje </button>
+		</div>
+	</div>
+</div>
+    
 
     <footer>
         <!--footer data-->

@@ -1,4 +1,3 @@
-<!doctype html>
 <html>
 
 <head>
@@ -25,7 +24,7 @@
     <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="css/Aanbiedingen.css">
+    <link rel="stylesheet" type="text/css" href="css/artiesten.css">
 </head>
 
 <body>
@@ -46,44 +45,63 @@
             <a href="./producten.php">Product Info</a>
             <a href="./kalender.php">Kalender</a>
             <a href="./artiesten.php">Artiesten</a>   
-            <a href="./Aanbiedingen.php">Aanbiedingen</a>
+            <a href="./aanbiedingen.php">Aanbiedingen</a>
             <a href="./contact.php">Contact</a>
             <a href="./registreren.php">Registreren</a>
         </nav>
         <div></div>
-    </header> 
-    <section>      
-        <?php
+    </header>
+
+    <section>
+        <table>
+            <tr>
+                <th>Naam</th>
+                <th>Achternaam</th>
+                <th>Voornaam</th>
+                <th>Tussenvoegsel</th>
+                <th>Statement</th>
+                <th>Telefoon Nummer</th>
+                <th>Actief of niet</th>
+            </tr>
+            <?php
             require('dbconnect.php');
-            $sql = "SELECT * FROM aanbiedingen WHERE NOT aanbiedingen_id = 2";
+            $sql = "SELECT * FROM artiesten";
             if ($result = $conn->query($sql)) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<article style='display:grid;'>";
-                    echo "<img src='".$row['afbeelding']."' alt''>";
-                    echo "<p>";
-                    echo $row['titel'];
-                    echo "</p>";
-                    echo "<p>";
-                    echo $row['omschrijving'];
-                    echo "</p>";
-                    echo "<p>";
-                    echo $row['begindatum'];
-                    echo "</p>";
-                    echo "<p>";
-                    echo $row['einddatum'];
-                    echo "</p>";
-                    echo "<p>";
-                    $sql = "SELECT * FROM artiesten WHERE artiest_id = ".$row['artiest_id'];
-                    if($result2 = $conn->query($sql)){
-                        $row2 = $result2->fetch_assoc();
-                        echo $row2['naam'];
+                    echo "<tr>";
+                    echo "<td>";
+                    echo $row['naam'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['achternaam'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['voornaam'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['tussenvoegsel'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['statement'];
+                    echo "</td>";
+                    echo "<td>";
+                    echo $row['telefoon'];
+                    echo "</td>";
+                    echo "<td>";
+                    if ($row['actief'] == 1) {
+                        echo "wel actief";
+                    } else if ($row['actief'] == 0) {
+                        echo "niet actief";
                     }
-                    echo "</p>";
-                    echo "</article>";
+                    echo "</td>";
+                    echo "</tr>";
                 }
+                
             }
-        ?>
+            ?>
+        </table>
     </section>
+
     <footer>
         <!--footer data-->
 
