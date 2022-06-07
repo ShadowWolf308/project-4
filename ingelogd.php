@@ -65,23 +65,75 @@ session_start();
     <?php
     echo "Welkom ".$_SESSION['username'];
     ?>
+
+    
     </h1>
     <div class="box">
 	<a class="button" href="#popup1">Toon uw persoonlijke aanbieding</a>
 </div>
 
+    <div class="box2">
+	<a class="button2" href="#popup2">Gegevens aanpassen</a>
+</div>
+
+
 <div id="popup1" class="overlay">
 	<div class="popup">
-    Uw persoonlijke aanbieding is toegevoegd aan uw winkelmandje
+   Scan deze code bij de bar voor uw kortingscode!
 		<a class="close" href="#">&times;</a>
 		<div class="content">
-        <img id="imgblik" src="./images/blink.png" alt="blikje">
-            <button id="mandje"> Ga naar winkelmandje </button>
+        <img id="imgblik" src="./images/blink.png" alt="blikje" size="100">
+        <span id="text"></span>
+            <button id="mandje">Kopieer uw code  </button>
+
 		</div>
 	</div>
 </div>
-    
 
+
+<div id="popup2" class="overlay">
+	<div class="popup">
+  Pas uw gegevens aan
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+     <form method="POST">
+  <label for="Username">Gebruikersnaam:</label><br>
+  <input type="text" id="Username" name="Username"><br>
+  <label for="Wachtwoord">Uw Oude Wachtwoord:</label><br>
+  <input type="password" id="Wachtwoord" name="WWoud"><br>
+  <label for="Wachtwoord">Uw Nieuwe Wachtwoord:</label><br>
+  <input type="password" id="Wachtwoord" name="WWnieuw"><br>
+  <label for="Wachtwoord">Herhaal uw Nieuwe wachtwoord:</label><br>
+  <input type="password" id="Wachtwoord" name="WWherhaal"> <br> <br>
+  <input type="submit" value="Aanpassen" name="submit">
+    </form>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+    <script>
+        var copy = ""
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+      result += characters.charAt(Math.floor(Math.random() * 
+ charactersLength));
+   }
+   document.getElementById('text').innerHTML=result;
+   copy = result;
+   
+}makeid(7)
+document.getElementById('mandje').addEventListener('click',function() {
+navigator.clipboard.writeText(copy);
+alert('Uw code is gekopieerd.')
+});
+</script>
     <footer>
         <!--footer data-->
 
