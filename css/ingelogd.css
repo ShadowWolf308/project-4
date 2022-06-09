@@ -84,7 +84,7 @@ a:hover{
     font-size: 1.7em;
 }
 
-h1{
+.echoname{
     color: #ffffff;
     position: absolute;
     margin-left: 2.5%;
@@ -181,51 +181,9 @@ h1{
     background: #c4c4c4;
     color: rgb(255, 115, 0);
   }
-  .button2 {
-    position: absolute;
-  font-size: 1em;
-  padding: 10px;
-  color: #fff;
-  border: 2px solid #ffffff;
-  border-radius: 20ch;
-  text-decoration: none;
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-  margin-top: 40vh;
-  margin-left: 36vw;
-}
-.button2:hover {
-  background: #000000;
-  color: rgb(255, 115, 0);
-}
-  .popup2 {
-    margin: 5vh auto;
-    padding: 20vh;
-    background-color:white ;
-    border-radius: 2vh;
-    width: 30%;
-    position: relative;
-    transition: all 5s ease-in-out;
-  }
-  
-  .popup2 h2 {
-    margin-top: 0;
-    color: rgb(255, 255, 255);
-  }
-  .popup2 .close {
-    position: absolute;
-    top: 2vh;
-    right: 3vw;
-    transition: all 200ms;
-    font-size: 5vh;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  .popup2 .close:hover {
-    color: #060503;
-  }
-  .popup2 .content {
-    max-height: 700%;
-    overflow: auto;
+
+  form{
+    margin-left: 30vw;
+    width: 30vw;
+    height: 5vh;
   }
