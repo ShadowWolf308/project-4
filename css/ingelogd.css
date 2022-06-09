@@ -87,11 +87,12 @@ a:hover{
 h1{
     color: #ffffff;
     position: absolute;
-    margin-left: 35%;
+    margin-left: 2.5%;
     margin-top: 7%;
-    background-color: #e8840080;
+    background-color: #00000080;
     width: 25vw;
-    padding-left: 3vw ;
+    padding-left: 35vw ;
+    padding-right: 35vw ;
     padding-bottom: 60vh;
     border-radius: 4vw;
 
@@ -103,7 +104,7 @@ h1{
     font-size: 1em;
     padding: 10px;
     color: #fff;
-    border: 2px solid #0d0c0b;
+    border: 2px solid #ffffff;
     border-radius: 20ch;
     text-decoration: none;
     cursor: pointer;
@@ -163,7 +164,6 @@ h1{
     max-height: 700%;
     overflow: auto;
   }
-  
   #mandje{
     position: absolute;
     font-size: 1em;
@@ -177,22 +177,16 @@ h1{
     margin-top: 18vh;
     margin-left: 15vw;
   }
-
   #mandje:hover{
     background: #c4c4c4;
     color: rgb(255, 115, 0);
   }
-
-
-
-
-
   .button2 {
     position: absolute;
   font-size: 1em;
   padding: 10px;
   color: #fff;
-  border: 2px solid #0d0c0b;
+  border: 2px solid #ffffff;
   border-radius: 20ch;
   text-decoration: none;
   cursor: pointer;
@@ -204,8 +198,6 @@ h1{
   background: #000000;
   color: rgb(255, 115, 0);
 }
-
-
   .popup2 {
     margin: 5vh auto;
     padding: 20vh;
