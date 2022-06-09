@@ -69,14 +69,14 @@ if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
     </article>  
 
 
-<button data-modal-target="#modal">Open Modal</button>
+<button data-modal-target="#modal">Welkom</button>
   <div class="modal" id="modal">
     <div class="modal-header">
       <div class="title">Example Modal</div>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+    Welkom op de homepagina van Tiger Energy, ons bedrijf is begonnen met het maken van energy in 2010 toen de wereld toe was aan een nieuwe unieke energydrank beleving.
     </div>
   </div>
   <div id="overlay"></div>
