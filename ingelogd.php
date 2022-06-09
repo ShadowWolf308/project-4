@@ -1,10 +1,28 @@
 <?php
 session_start();
-
 // if ($_SESSION['ingelogd'] != true) {
   //   header("location: inloggen.php");
  //}
-
+$error = "";
+if(isset($_POST['submit'])) {
+    require('dbconnect.php');
+    $sql = "SELECT * FROM gebruikers WHERE gebruiker_id = ".$_SESSION['id'];
+    if ($result = $conn->query($sql)){
+        $row = $result->fetch_assoc();
+        if ($_POST['WWoud'] == $row['password']) {
+            if ($_POST['WWnieuw'] == $_POST['WWherhaal']) {
+                $sql = "UPDATE gebruikers SET password = '".$_POST['WWnieuw']."' WHERE gebruiker_id = ".$_SESSION['id'];
+                if ($result = $conn->query($sql)) {
+                    $error = "Wachtwoord is geupdate";
+                } 
+            }else{
+                $error = "nieuw wachtwoord is niet hetzelfde";
+            }
+        }else{
+            $error ="oud wachtwoord onjuist";
+        }
+    }
+}
 ?>
 
 <html>
@@ -59,16 +77,26 @@ session_start();
         </nav>
         <div></div>
     </header>
-    <h1 class="echoname">
+
+    <section class="echoname">
+    <h1>
     <?php
     echo "Welkom ".$_SESSION['username'];
     ?>  
     </h1>
+    <form method="POST">
+        <label for="Wachtwoord">Uw Oude Wachtwoord:</label><br>
+        <input type="password" class="Wachtwoord" name="WWoud" required><br>
+        <label for="Wachtwoord">Uw Nieuwe Wachtwoord:</label><br>
+        <input type="password" class="Wachtwoord" name="WWnieuw" required><br>
+        <label for="Wachtwoord">Herhaal uw Nieuwe wachtwoord:</label><br>
+        <input type="password" class="Wachtwoord" name="WWherhaal" required> <br> <br>
+        <input type="submit" value="Aanpassen" name="submit"><br>
+        <?php echo $error ?>
+    </form>
+    </section>
     <div class="box">
 	    <a class="button" href="#popup1">Toon uw persoonlijke aanbieding</a>
-    </div>
-    <div class="box2">
-	    <a class="button2" href="#popup2">Gegevens aanpassen</a>
     </div>
     <div id="popup1" class="overlay">
         <div class="popup">
@@ -78,25 +106,6 @@ session_start();
                 <img id="imgblik" src="./images/blink.png" alt="blikje" size="100">
                 <span id="text"></span>
                 <button id="mandje">Kopieer uw code</button>
-            </div>
-        </div>
-    </div>
-    <div id="popup2" class="overlay">
-        <div class="popup">
-            Pas uw gegevens aan
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-                <form method="POST">
-                    <label for="Username">Gebruikersnaam:</label><br>
-                    <input type="text" id="Username" name="Username"><br>
-                    <label for="Wachtwoord">Uw Oude Wachtwoord:</label><br>
-                    <input type="password" id="Wachtwoord" name="WWoud"><br>
-                    <label for="Wachtwoord">Uw Nieuwe Wachtwoord:</label><br>
-                    <input type="password" id="Wachtwoord" name="WWnieuw"><br>
-                    <label for="Wachtwoord">Herhaal uw Nieuwe wachtwoord:</label><br>
-                    <input type="password" id="Wachtwoord" name="WWherhaal"> <br> <br>
-                    <input type="submit" value="Aanpassen" name="submit">
-                </form>
             </div>
         </div>
     </div>

@@ -65,9 +65,21 @@ if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
     <article class= "text2">
     <h1>Welkom!</h1><br>
     <p>Welkom op de homepagina van Tiger Energy, ons bedrijf is begonnen met het maken van energy in 2010 toen de wereld toe was aan een nieuwe unieke energydrank beleving.<br>
-
     </p>
-    </article>
+    </article>  
+
+
+<button data-modal-target="#modal">Welkom</button>
+  <div class="modal" id="modal">
+    <div class="modal-header">
+      <div class="title">Example Modal</div>
+      <button data-close-button class="close-button">&times;</button>
+    </div>
+    <div class="modal-body">
+    Welkom op de homepagina van Tiger Energy, ons bedrijf is begonnen met het maken van energy in 2010 toen de wereld toe was aan een nieuwe unieke energydrank beleving.
+    </div>
+  </div>
+  <div id="overlay"></div>
 
 
     <footer>
@@ -75,7 +87,7 @@ if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
 
     </footer>
     <!--linking a .js file-->
-    <script src="" type="text/javascript"></script>
+    <script src="./js/index.js" type="text/javascript"></script>
 </body>
 
 </html>

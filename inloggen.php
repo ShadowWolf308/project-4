@@ -2,11 +2,8 @@
     $error = "";
     if (isset($_POST['submit'])) {
         if (!empty($_POST['username']) && !empty($_POST['password'])) {
-    
             require("dbconnect.php");
-    
             $sql = "SELECT * FROM gebruikers WHERE username = '".trim($_POST['username'])."' AND password = '".trim($_POST['password'])."'";
-    
             if ($result = $conn->query($sql)) {
                 $aantal = $result->num_rows;
                 if ($aantal == 1) {
@@ -83,6 +80,7 @@
         <input type="text" name="username" required placeholder="vul hier je username in">
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
         <input type="submit" value="log in" name="submit">
+        <?php echo $error ?>
     </form>
     <p>Nog geen account</p>
     <a href="registreren.php">Maak een account aan</a>
