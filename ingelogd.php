@@ -3,13 +3,24 @@ session_start();
 // if ($_SESSION['ingelogd'] != true) {
   //   header("location: inloggen.php");
  //}
-$error = ""
+$error = "";
 if(isset($_POST['submit'])) {
     require('dbconnect.php');
-    if ($_POST['WWoud'] == ) {
-        
-    }else{
-        $error = "wachtwoord onjuist";
+    $sql = "SELECT * FROM gebruikers WHERE gebruiker_id = ".$_SESSION['id'];
+    if ($result = $conn->query($sql)){
+        $row = $result->fetch_assoc();
+        if ($_POST['WWoud'] == $row['password']) {
+            if ($_POST['WWnieuw'] == $_POST['WWherhaal']) {
+                $sql = "UPDATE gebruikers SET password = ".$_POST['WWnieuw']." WHERE gebruiker_id = ".$_SESSION['id'];
+                if ($result = $conn->query($sql)) {
+                    $error = "Wachtwoord is geupdate";
+                } 
+            }else{
+                $error = "nieuw wachtwoord is niet hetzelfde";
+            }
+        }else{
+            $error = "oud wachtwoord onjuist";
+        }
     }
 }
 ?>
