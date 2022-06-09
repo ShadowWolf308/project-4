@@ -11,7 +11,7 @@ if(isset($_POST['submit'])) {
         $row = $result->fetch_assoc();
         if ($_POST['WWoud'] == $row['password']) {
             if ($_POST['WWnieuw'] == $_POST['WWherhaal']) {
-                $sql = "UPDATE gebruikers SET password = ".$_POST['WWnieuw']." WHERE gebruiker_id = ".$_SESSION['id'];
+                $sql = "UPDATE gebruikers SET password = '".$_POST['WWnieuw']."' WHERE gebruiker_id = ".$_SESSION['id'];
                 if ($result = $conn->query($sql)) {
                     $error = "Wachtwoord is geupdate";
                 } 
@@ -19,7 +19,7 @@ if(isset($_POST['submit'])) {
                 $error = "nieuw wachtwoord is niet hetzelfde";
             }
         }else{
-            $error = "oud wachtwoord onjuist";
+            $error ="oud wachtwoord onjuist";
         }
     }
 }
@@ -86,12 +86,12 @@ if(isset($_POST['submit'])) {
     </h1>
     <form method="POST">
         <label for="Wachtwoord">Uw Oude Wachtwoord:</label><br>
-        <input type="password" id="Wachtwoord" name="WWoud" required><br>
+        <input type="password" class="Wachtwoord" name="WWoud" required><br>
         <label for="Wachtwoord">Uw Nieuwe Wachtwoord:</label><br>
-        <input type="password" id="Wachtwoord" name="WWnieuw" required><br>
+        <input type="password" class="Wachtwoord" name="WWnieuw" required><br>
         <label for="Wachtwoord">Herhaal uw Nieuwe wachtwoord:</label><br>
-        <input type="password" id="Wachtwoord" name="WWherhaal" required> <br> <br>
-        <input type="submit" value="Aanpassen" name="submit">
+        <input type="password" class="Wachtwoord" name="WWherhaal" required> <br> <br>
+        <input type="submit" value="Aanpassen" name="submit"><br>
         <?php echo $error ?>
     </form>
     </section>
