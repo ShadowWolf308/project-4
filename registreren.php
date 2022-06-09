@@ -94,6 +94,7 @@
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
         <input type="password" name="passwordcheck" required placeholder="vul hier je wachtwoord nog een keer in">
         <input type="submit" value="registreer" name="submit">
+        <?php echo $error ?>
     </form>
     <p>Heb je al een account?</p>
     <a href="inloggen.php">Log In</a>
