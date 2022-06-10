@@ -1,8 +1,8 @@
 <?php
 session_start();
-// if ($_SESSION['ingelogd'] != true) {
-  //   header("location: inloggen.php");
- //}
+if ($_SESSION['ingelogd'] != true) {
+    header("location: inloggen.php");
+ }
 $error = "";
 if(isset($_POST['submit'])) {
     require('dbconnect.php');
