@@ -25,7 +25,7 @@
     <title>www.TIGER.nl</title>
 
     <!--linking a .css page-->
-    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <link rel="stylesheet" type="text/css" href="./css/productinfo.css">
 </head>
 
 <body>
