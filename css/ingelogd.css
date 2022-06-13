@@ -86,6 +86,7 @@ a:hover{
 
 .echoname{
     color: #ffffff;
+    font-size: larger;
     position: absolute;
     margin-left: 2.5%;
     margin-top: 7%;
@@ -93,10 +94,12 @@ a:hover{
     width: 25vw;
     padding-left: 35vw ;
     padding-right: 35vw ;
-    padding-bottom: 60vh;
+    padding-bottom: 30vh;
     border-radius: 4vw;
 
 }
+
+
 
   
   .button {
@@ -109,8 +112,8 @@ a:hover{
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    margin-top: 30vh;
-    margin-left: 36vw;
+    margin-top: 70vh;
+    margin-left: 35vw;
   }
   .button:hover {
     background: #000000;
@@ -174,7 +177,7 @@ a:hover{
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    margin-top: 18vh;
+    margin-top: 15vh;
     margin-left: 15vw;
   }
   #mandje:hover{
@@ -183,7 +186,51 @@ a:hover{
   }
 
   form{
+   
+   
+   border-radius: 1vw;
     margin-left: 30vw;
     width: 30vw;
     height: 5vh;
+  }
+
+  .actie{
+    position: absolute;
+    margin-left: -35vw ;
+    margin-top: 4vh;
+    width: 30vw;
+    height: 60vh;
+  }
+  
+
+  .uitloggen{
+    position: absolute;
+    margin-left: 40vw;
+    margin-top: 27vh;
+    border: 2px solid #ffffff;
+    border-radius: 20ch;
+  }
+
+
+  input{
+    border-radius: 15px;
+    border: 2px solid #000000;
+  
+  }
+
+  input[type=submit]{
+    position: absolute;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #ffffff;
+    border-radius: 20ch;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+  }
+
+  input[type=submit]:hover{
+  background: #000000;
+    color: rgb(255, 115, 0);
   }
