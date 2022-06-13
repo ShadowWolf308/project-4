@@ -72,3 +72,16 @@ a:hover{
     color: var(--MainColor);
 }
 /* <---------Eind Header---------> */
+td, th {
+    border: #000000 2px solid;;
+    color: #fff;
+    background-color: #33513eda;
+    text-align: center;
+}
+table {
+    position: absolute;
+    left: 9vw;
+    top: 9vh;
+    height: 82vh;
+    width: 82vw;
+}

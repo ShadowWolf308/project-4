@@ -76,7 +76,7 @@
                     if($result2 = $conn->query($sql)){
                         $row2 = $result2->fetch_assoc();
                         echo "<td>";
-                        echo $row2['plaatsnaam']."<br>".$row2['gebouw'];
+                        echo $row2['gebouw'].", ".$row2['plaatsnaam'];
                         echo "</td>";
                     }
                     echo "<td>";
