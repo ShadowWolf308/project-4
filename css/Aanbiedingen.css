@@ -73,3 +73,7 @@ a:hover{
 
 /* <---------Alles voor body (text)---------> */
 
+.aanbieding p{
+    /* display: flex; */
+    color: #fff;
+}

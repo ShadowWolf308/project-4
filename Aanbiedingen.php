@@ -58,7 +58,7 @@
             $sql = "SELECT * FROM aanbiedingen WHERE NOT aanbiedingen_id = 2";
             if ($result = $conn->query($sql)) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<article style='display:grid;'>";
+                    echo "<article class='aanbieding'>";
                     echo "<img src='./images/".$row['afbeelding']."' alt''>";
                     echo "<p>";
                     echo $row['titel'];
