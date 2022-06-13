@@ -184,7 +184,7 @@ a:hover{
     border-top-right-radius: 50px;
     border-bottom-right-radius: 50px;    
     position: absolute;
-    top: 47vh;
+    top: calc(50vh - 25px);
   }
 
   #button-main >p {
