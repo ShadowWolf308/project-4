@@ -62,17 +62,10 @@ if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
     <p>2+1 Gratis</p>
     </article>
 
-    <article class= "text2">
-    <h1>Welkom!</h1><br>
-    <p>Welkom op de homepagina van Tiger Energy, ons bedrijf is begonnen met het maken van energy in 2010 toen de wereld toe was aan een nieuwe unieke energydrank beleving.<br>
-    </p>
-    </article>  
-
-
-<button data-modal-target="#modal">Welkom</button>
+<button data-modal-target="#modal" id="button-main"><p>🢂 Welkom 🢀</p></button>
   <div class="modal" id="modal">
     <div class="modal-header">
-      <div class="title">Example Modal</div>
+      <div class="title"><p>WELKOM!</p></div>
       <button data-close-button class="close-button">&times;</button>
     </div>
     <div class="modal-body">

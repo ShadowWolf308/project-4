@@ -82,7 +82,7 @@
         <input type="submit" value="log in" name="submit">
         <?php echo $error ?>
     </form>
-    <p>Nog geen account</p>
+    <p>Nog geen account?</p>
     <a href="registreren.php">Maak een account aan</a>
     <footer>
         <!--footer data-->

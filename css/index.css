@@ -108,20 +108,6 @@ a:hover{
 			0 1 90px var(--MainColor);
 	}
 }
-
-/* <---------Alles voor aanbieding (text)---------> */
-
-.text2{
-    position: absolute;
-    padding: 1.2em;
-    color: var(--Wit);
-    width: 400px;
-    top: 20em;
-    background-color: rgba(0, 0, 0, 0.6);
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 50px;
-}
-
 /* ------------------POPUP----------------- */
 *, *::after, *::before {
     box-sizing: border-box;
@@ -135,7 +121,8 @@ a:hover{
     transition: 200ms ease-in-out;
     border-radius: 10px;
     z-index: 10;
-    background-color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--Wit);
     width: 500px;
     max-width: 80%;
   }
@@ -150,9 +137,11 @@ a:hover{
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid black;
+
   }
   
   .modal-header .title {
+    display: flex;
     font-size: 1.25rem;
     font-weight: bold;
   }
@@ -186,3 +175,38 @@ a:hover{
     opacity: 1;
     pointer-events: all;
   }
+
+  #button-main{
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--Wit);
+    width: 20%;
+    height: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;    
+    position: absolute;
+    top: 47vh;
+  }
+
+  #button-main >p {
+    -webkit-animation: glow 2s ease-in-out infinite alternate;
+    -moz-animation: glow 2s ease-in-out infinite alternate;
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow {
+    from {
+      color: var(--Wit);
+      text-shadow: 0 0 10px var(--MainColor), 0 0 20px var(--MainColor), 0 0 30px var(--MainColor),
+        0 0 40px var(--MainColor), 0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor),
+        0 0 90px var(--MainColor);
+    }
+  
+    to {
+      color: var(--Wit);
+      text-shadow: 0 0 20px var(--MainColor), 0 0 30px var(--MainColor), 0 0 40px var(--MainColor),
+        0 0 50px var(--MainColor), 0 0 60px var(--MainColor), 0 0 70px var(--MainColor), 0 0 80px var(--MainColor),
+        0 1 90px var(--MainColor);
+    }
+  }
+
+/* ------------------EindPOPUP----------------- */
