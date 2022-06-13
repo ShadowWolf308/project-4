@@ -187,8 +187,6 @@ a:hover{
     top: 47vh;
   }
 
-  /* hoi ik ben diede */
-
   #button-main >p {
     -webkit-animation: glow 2s ease-in-out infinite alternate;
     -moz-animation: glow 2s ease-in-out infinite alternate;
