@@ -1,17 +1,25 @@
 <?php
 session_start();
-// if ($_SESSION['ingelogd'] != true) {
-  //   header("location: inloggen.php");
- //}
+if ($_SESSION['ingelogd'] != true) {
+    header("location: inloggen.php");
+ }
 $error = "";
 if(isset($_POST['submit'])) {
     require('dbconnect.php');
+    function safe($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+    $pass = safe($_POST['WWnieuw']);
+    $pass = $conn->real_escape_string($pass);
     $sql = "SELECT * FROM gebruikers WHERE gebruiker_id = ".$_SESSION['id'];
     if ($result = $conn->query($sql)){
         $row = $result->fetch_assoc();
         if ($_POST['WWoud'] == $row['password']) {
             if ($_POST['WWnieuw'] == $_POST['WWherhaal']) {
-                $sql = "UPDATE gebruikers SET password = '".$_POST['WWnieuw']."' WHERE gebruiker_id = ".$_SESSION['id'];
+                $sql = "UPDATE gebruikers SET password = '".$pass."' WHERE gebruiker_id = ".$_SESSION['id'];
                 if ($result = $conn->query($sql)) {
                     $error = "Wachtwoord is geupdate";
                 } 

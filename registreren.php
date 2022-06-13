@@ -2,15 +2,25 @@
     $error = "";
     if (isset($_POST['submit'])) {
         if (!empty($_POST['username']) && !empty($_POST['password'])) {
-            if(trim($_POST['password']) == trim($_POST['password'])){
+            if(trim($_POST['password']) == trim($_POST['passwordcheck'])){
                 require("dbconnect.php");
-                $sql = "SELECT * FROM gebruikers WHERE username = '".trim($_POST['username'])."'";
+                function safe($data) {
+                    $data = trim($data);
+                    $data = stripslashes($data);
+                    $data = htmlspecialchars($data);
+                    return $data;
+                }
+                $user = safe($_POST['username']);
+                $user = $conn->real_escape_string($user);
+                $pass = safe($_POST['password']);
+                $pass = $conn->real_escape_string($pass);
+                $sql = "SELECT * FROM gebruikers WHERE username = '".$user."'";
                 if ($result = $conn->query($sql)) {
                     $aantal = $result->num_rows;
                     if ($aantal == 0) {
-                    $sql = "INSERT INTO gebruikers (username,password,permission) VALUES ('".trim($_POST['username'])."','".trim($_POST['password'])."','1')";
+                    $sql = "INSERT INTO gebruikers (username,password,permission) VALUES ('".$user."','".$pass."','1')";
                     if ($result = $conn->query($sql)) {
-                        $sql = "SELECT * FROM gebruikers WHERE username = '".trim($_POST['username'])."' AND password = '".trim($_POST['password'])."'";
+                        $sql = "SELECT * FROM gebruikers WHERE username = '".$user."' AND password = '".$pass."'";
                         if ($result = $conn->query($sql)) {
                             $aantal = $result->num_rows;
                             if ($aantal == 1) {
