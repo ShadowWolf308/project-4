@@ -86,22 +86,35 @@ if(isset($_POST['submit'])) {
         <div></div>
     </header>
 
+
     <section class="echoname">
+    <img class="actie" src="images/cheap.png" alt="Logo">
     <h1>
     <?php
     echo "Welkom ".$_SESSION['username'];
     ?>  
     </h1>
+
+
     <form method="POST">
-        <label for="Wachtwoord">Uw Oude Wachtwoord:</label><br>
+        <label for="Wachtwoord"> Oude Wachtwoord:</label><br>
         <input type="password" class="Wachtwoord" name="WWoud" required><br>
-        <label for="Wachtwoord">Uw Nieuwe Wachtwoord:</label><br>
+        <label for="Wachtwoord"> Nieuwe Wachtwoord:</label><br>
         <input type="password" class="Wachtwoord" name="WWnieuw" required><br>
-        <label for="Wachtwoord">Herhaal uw Nieuwe wachtwoord:</label><br>
+        <label for="Wachtwoord">Herhaal Nieuwe wachtwoord:</label><br>
         <input type="password" class="Wachtwoord" name="WWherhaal" required> <br> <br>
         <input type="submit" value="Aanpassen" name="submit"><br>
         <?php echo $error ?>
     </form>
+
+    <p> Dit is jouw persoonlijke pagina. <br> 
+    Hier kunt u aanbiedingen zien speciaal voor u! <br>
+    Klik op de knop hieronder om uw speciale aanbieding te claimen
+    
+  
+    <a class="uitloggen" href="loguit.php">Uitloggen</a>
+  
+  
     </section>
     <div class="box">
 	    <a class="button" href="#popup1">Toon uw persoonlijke aanbieding</a>
@@ -111,7 +124,7 @@ if(isset($_POST['submit'])) {
         Scan deze code bij de bar voor uw kortingscode!
             <a class="close" href="#">&times;</a>
             <div class="content">
-                <img id="imgblik" src="./images/blink.png" alt="blikje" size="100">
+              
                 <span id="text"></span>
                 <button id="mandje">Kopieer uw code</button>
             </div>
