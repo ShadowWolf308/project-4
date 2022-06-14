@@ -73,7 +73,7 @@ a:hover{
 }
 /* <---------Eind Header---------> */
 td, th {
-    border: #000000 2px solid;;
+    border: #000000 2px solid;
     color: #fff;
     background-color: #33513eda;
     text-align: center;
@@ -81,6 +81,10 @@ td, th {
 th {
     background-color: #33512eed;
     font-size: 18px;
+}
+.img {
+    width: 38px;
+    height: 85px;
 }
 table {
     position: absolute;
