@@ -72,3 +72,44 @@ nav a:hover{
     color: var(--MainColor);
 }
 /* <---------Eind Header---------> */
+
+.login{
+    left: 39vw;
+    width: 22vw;
+    border-radius: 15px;
+    padding-left: 5.5vw;
+    padding-top: 2.5vw;
+    margin-left: 35.5vw;
+    margin-top: 12vh;
+    padding-bottom: 5vh;
+    background-color: #00000088;
+    border: #000000 solid; 
+}
+
+input{
+    margin-top: 6vh;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+.maakacc{
+    font-size: small;
+     margin-top: -0.3vh;
+    margin-left: 2vw;
+    position: absolute;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #000000;
+    border-radius: 20ch;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;   
+}
+
+p{
+    font-size: small;
+    color: white;
+    margin-left: 3vw;
+}
