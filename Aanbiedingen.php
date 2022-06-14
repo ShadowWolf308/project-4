@@ -72,13 +72,6 @@
                     echo "<p>";
                     echo $row['einddatum'];
                     echo "</p>";
-                    echo "<p>";
-                    $sql = "SELECT * FROM artiesten WHERE artiest_id = ".$row['artiest_id'];
-                    if($result2 = $conn->query($sql)){
-                        $row2 = $result2->fetch_assoc();
-                        echo $row2['naam'];
-                    }
-                    echo "</p>";
                     echo "</article>";
                 }
             }
