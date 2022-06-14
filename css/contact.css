@@ -74,11 +74,11 @@ a:hover{
 
 form {
     margin-top: calc(40vh - 108px);
-    margin-left: 35vw;
+    margin-left: calc(50vw - 200px);
     display: flex;
     flex-direction: column;
     row-gap: 10px;
-    width: 30vw;
+    width: 400px;
     border-radius: 15px;
     padding: 2px 5px;
     background-color: rgba(0, 0, 0, 0.6);
