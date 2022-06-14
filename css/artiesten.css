@@ -78,6 +78,10 @@ td, th {
     background-color: #33513eda;
     text-align: center;
 }
+th {
+    background-color: #33512eed;
+    font-size: 18px;
+}
 table {
     position: absolute;
     left: 9vw;

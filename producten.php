@@ -59,22 +59,22 @@
             <th>Welk evenement/datum verkrijgbaar</th>
         </tr>
         <tr>
-            <td><img src="" alt=""></td>
+            <td><img src="./images/original.png" alt=""></td>
             <td>Peach</td>
             <td>Verkrijgbaar op elke evenement</td>
         </tr>
         <tr>
-            <td><img src="" alt=""></td>
+            <td><img src="./images/pineapple.png" alt=""></td>
             <td>Pineapple</td>
             <td>Verkrijgbaar op evenementen tussen 2021-03-01 en 2021-04-01</td>
         </tr>
         <tr>
-            <td><img src="" alt=""></td>
+            <td><img src="./images/lime.png" alt=""></td>
             <td>Lime</td>
             <td>Verkrijgbaar op evenementen tussen 2021-03-15 en 2021-03-31</td>
         </tr>
         <tr>
-            <td><img src="" alt=""></td>
+            <td><img src="./images/grape.png" alt=""></td>
             <td>Grape</td>
             <td>Verkrijgbaar op het evenement op 2021-03-01</td>
         </tr>
@@ -84,8 +84,8 @@
             <td>Verkrijgbaar op evenementen tussen 2021-04-01 en 2021-04-13</td>
         </tr>
         <tr>
-            <td><img src="" alt=""></td>
-            <td>Frost Special</td>
+            <td><img src="./images/blueberry.png" alt=""></td>
+            <td>Blueberry</td>
             <td>Verkrijgbaar op het evenement op 2021-04-01</td>
         </tr>
     </table>
