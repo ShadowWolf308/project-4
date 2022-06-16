@@ -155,3 +155,11 @@ input[type=submit]:hover{
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
+
+
+
+#error{
+    color: white;
+    margin-left: 0.1vw;
+    font-size: smaller;
+}
