@@ -236,3 +236,11 @@ a:hover{
   background: #000000;
     color: rgb(255, 115, 0);
   }
+
+  .Bewerken{
+    position: absolute;
+    margin-left: 30vw;
+    margin-top: 27vh;
+    border: 2px solid #ffffff;
+    border-radius: 20ch;
+  }

@@ -113,6 +113,7 @@ if(isset($_POST['submit'])) {
     
   
     <a class="uitloggen" href="loguit.php">Uitloggen</a>
+    <a class="Bewerken" href="bewerken.php">Bewerken</a>
   
   
     </section>
