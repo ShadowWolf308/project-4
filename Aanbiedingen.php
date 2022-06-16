@@ -52,31 +52,33 @@
         </nav>
         <div></div>
     </header> 
-    <section>      
+    <table>      
         <?php
             require('dbconnect.php');
             $sql = "SELECT * FROM aanbiedingen WHERE NOT aanbiedingen_id = 2";
             if ($result = $conn->query($sql)) {
                 while ($row = $result->fetch_assoc()) {
-                    echo "<article class='aanbieding'>";
+                    echo "<tr>";
+                    echo "<td>";
                     echo "<img src='./images/".$row['afbeelding']."' alt''>";
-                    echo "<p>";
+                    echo "</td>";
+                    echo "<td>";
                     echo $row['titel'];
-                    echo "</p>";
-                    echo "<p>";
+                    echo "</td>";
+                    echo "<td>";
                     echo $row['omschrijving'];
-                    echo "</p>";
-                    echo "<p>";
+                    echo "</td>";
+                    echo "<td>";
                     echo $row['begindatum'];
-                    echo "</p>";
-                    echo "<p>";
+                    echo "</td>";
+                    echo "<td>";
                     echo $row['einddatum'];
-                    echo "</p>";
-                    echo "</article>";
+                    echo "</td>";
+                    echo "</tr>";
                 }
             } 
         ?>
-    </section>
+    </table>
     <footer>
         <!--footer data-->
 
