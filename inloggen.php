@@ -76,14 +76,17 @@
         </nav>
         <div></div>
     </header>
+
+    <section class="login">
     <form method="POST">
         <input type="text" name="username" required placeholder="vul hier je username in">
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
         <input type="submit" value="log in" name="submit">
         <?php echo $error ?>
-    </form>
+    </form> <br> <br> <br>
     <p>Nog geen account?</p>
-    <a href="registreren.php">Maak een account aan</a>
+    <a class="maakacc" href="registreren.php">Maak een account aan</a>
+    </section>
     <footer>
         <!--footer data-->
 

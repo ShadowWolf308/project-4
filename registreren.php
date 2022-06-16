@@ -99,15 +99,21 @@
         </nav>
         <div></div>
     </header>
+
+    <section class="Registreer">
     <form method="POST">
-        <input type="text" name="username" required placeholder="vul hier je username in">
-        <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
-        <input type="password" name="passwordcheck" required placeholder="vul hier je wachtwoord nog een keer in">
+        <input type="text" name="username" required placeholder="vul hier je username in"> <br>
+        <input type="password" name="password" required placeholder="vul hier je wachtwoord in"> <br>
+        <input type="password" name="passwordcheck" required placeholder="vul hier je wachtwoord nog een keer in"> <br>
         <input type="submit" value="registreer" name="submit">
         <?php echo $error ?>
-    </form>
+    </form> <br> <br>
+    <section class="alacc">
     <p>Heb je al een account?</p>
-    <a href="inloggen.php">Log In</a>
+    <a class="inlog" href="inloggen.php">Log In</a>
+    </section>
+    </section>
+
     <footer>
         <!--footer data-->
 
@@ -117,3 +123,4 @@
 </body>
 
 </html>
+

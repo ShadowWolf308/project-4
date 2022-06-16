@@ -103,7 +103,7 @@ if(isset($_POST['submit'])) {
         <input type="password" class="Wachtwoord" name="WWnieuw" required><br>
         <label for="Wachtwoord">Herhaal Nieuwe wachtwoord:</label><br>
         <input type="password" class="Wachtwoord" name="WWherhaal" required> <br> <br>
-        <input type="submit" value="Aanpassen" name="submit"><br>
+        <input id="aanpassen" type="submit" value="Aanpassen" name="submit"><br>
         <?php echo $error ?>
     </form>
 

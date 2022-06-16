@@ -72,3 +72,86 @@ nav a:hover{
     color: var(--MainColor);
 }
 /* <---------Eind Header---------> */
+
+
+.Registreer{
+    left: 39vw;
+    width: 22vw;
+    border-radius: 15px;
+    padding-left: 5.5vw;
+    padding-top: 2.5vw;
+    margin-left: 35.5vw;
+    margin-top: 12vh;
+    padding-bottom: 5vh;
+    background-color: #00000088;
+    border: #000000 solid; 
+}
+
+input{
+    margin-top: 6vh;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.alacc{
+    color: rgb(255, 255, 255);
+    margin-top: 10vh;
+    margin-left: 13vw;
+}
+
+p{
+    font-size: smaller;
+    margin-left: -17vw;
+    margin-bottom: -3vh;
+}
+
+
+
+input[type=submit]{
+    left: calc(50vw - 60px);
+    width: 120px;
+    position: absolute;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #ffffff;
+    border-radius: 20ch;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+input[type=submit]:hover{
+    background: #000000;
+    color: rgb(255, 115, 0);
+}
+
+.inlog{
+    font-size: small;
+    margin-top: -0.3vh;
+    margin-left: 2vw;
+    position: absolute;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #000000;
+    border-radius: 20ch;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;   
+}
+
+.inlog:hover{
+    background: #000000;
+    color: rgb(255, 115, 0);
+}
+
+.Regi1{
+    position: absolute;
+    width: 20vw;
+    height: 70vh;
+    left: 17vw;
+    top: 10vw;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
