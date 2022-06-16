@@ -53,6 +53,12 @@
         <div></div>
     </header> 
     <table>      
+        <tr>
+            <th colspan="2">titel</th>
+            <th>Korting</th>
+            <th>Begin datum actie</th>
+            <th>Eind datum actie</th>
+        </tr>
         <?php
             require('dbconnect.php');
             $sql = "SELECT * FROM aanbiedingen WHERE NOT aanbiedingen_id = 2";
