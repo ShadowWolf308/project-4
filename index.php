@@ -103,7 +103,7 @@ if(isset($_SESSION['ingelogd']) && $_SESSION['ingelogd'] == true) {
 </article>
 
 <article class="f-txt5">
-    <p>Ontwikkeling door: <h>Tom Groenheide</h></p>
+    <p>Ontwikkeling door: <h>Tom Groenheide en diede</h></p>
 </article>
 </section>
 </footer>

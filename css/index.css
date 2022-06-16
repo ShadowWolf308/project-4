@@ -213,7 +213,7 @@ a:hover{
 
 /* * <-------------------FOOTER----------------> */
       .main-footer{
-        margin-top: 60px;
+          margin-top: 60px;
           padding-left: 15em;
           padding-right: 15em;
           display: flex;
