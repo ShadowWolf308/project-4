@@ -113,3 +113,9 @@ p{
     color: white;
     margin-left: 3vw;
 }
+
+#error{
+    color: white;
+    margin-left: 0.1vw;
+    font-size: smaller;
+}

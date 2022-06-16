@@ -106,7 +106,8 @@
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in"> <br>
         <input type="password" name="passwordcheck" required placeholder="vul hier je wachtwoord nog een keer in"> <br>
         <input type="submit" value="registreer" name="submit">
-        <?php echo $error ?>
+        
+        <p id='error'> <?php echo $error ?> </p>
     </form> <br> <br>
     <section class="alacc">
     <p>Heb je al een account?</p>
