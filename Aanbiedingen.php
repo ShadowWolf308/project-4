@@ -74,7 +74,7 @@
                     echo "</p>";
                     echo "</article>";
                 }
-            }
+            } 
         ?>
     </section>
     <footer>
