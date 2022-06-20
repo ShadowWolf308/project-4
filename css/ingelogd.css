@@ -88,8 +88,8 @@ a:hover{
     color: #ffffff;
     font-size: larger;
     position: absolute;
-    margin-left: 2.5%;
-    margin-top: 7%;
+    margin-left: 1.8%;
+    margin-top: 4%;
     background-color: #000000bc;
     border: #52643c solid ; 
     width: 25vw;
@@ -113,8 +113,8 @@ a:hover{
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    margin-top: 70vh;
-    margin-left: 35vw;
+    margin-top: 20vh;
+    margin-left: -5vw;
   }
   .button:hover {
     background: #000000;
@@ -207,7 +207,7 @@ a:hover{
   .uitloggen{
     position: absolute;
     margin-left: 40vw;
-    margin-top: 27vh;
+    margin-top: 22vh;
     border: 2px solid #ffffff;
     border-radius: 20ch;
   }
@@ -239,7 +239,7 @@ a:hover{
   .Bewerken{
     position: absolute;
     margin-left: 30vw;
-    margin-top: 27vh;
+    margin-top: 22vh;
     border: 2px solid #ffffff;
     border-radius: 20ch;
   }
@@ -247,7 +247,7 @@ a:hover{
 
   .main-footer{
     position: absolute;
-    margin-top: 45vw;
+    margin-top: 40.7vw;
     padding-left: 15em;
     padding-right: 15em;
     display: flex;
