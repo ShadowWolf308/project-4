@@ -91,7 +91,6 @@ a:hover{
     margin-left: 2.5%;
     margin-top: 7%;
     background-color: #014c0bbc;
-    opacity: 80%;
     border: #000000 solid ; 
     width: 25vw;
     padding-left: 35vw ;
@@ -235,4 +234,12 @@ a:hover{
   input[type=submit]:hover{
   background: #000000;
     color: rgb(255, 115, 0);
+  }
+
+  .Bewerken{
+    position: absolute;
+    margin-left: 30vw;
+    margin-top: 27vh;
+    border: 2px solid #ffffff;
+    border-radius: 20ch;
   }

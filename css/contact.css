@@ -122,3 +122,15 @@ p {
     color: var(--Wit);
     font-size: 20px;
 }
+
+
+
+input[type=submit]:hover{
+    background: #000000;
+    color: rgb(255, 115, 0);
+}
+
+.submit:hover{
+    background: #000000;
+    color: rgb(255, 115, 0);
+}

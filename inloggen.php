@@ -82,7 +82,7 @@
         <input type="text" name="username" required placeholder="vul hier je username in">
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
         <input type="submit" value="log in" name="submit">
-        <?php echo $error ?>
+        <p id='error'> <?php echo $error ?> </p>
     </form> <br> <br> <br>
     <p>Nog geen account?</p>
     <a class="maakacc" href="registreren.php">Maak een account aan</a>
