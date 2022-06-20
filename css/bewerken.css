@@ -86,7 +86,7 @@ form {
 
 #submit {
     display: flex;
-    color: var(--color);
+    color: var(--Zwart);
     width: 50%;
     text-align: center;
     justify-content: center;
@@ -94,6 +94,7 @@ form {
     height: 30px;
     border-radius: 15px;
     font-size: 16px;
+    transition: all 0.3s ease-out;
 }
 
 label {
@@ -104,3 +105,10 @@ label {
 #update, #delete, #aanbieding, #gebruiker, #locatie, #artiest, #aanbieding1, #locatie1, #artiest1, #aanbieding2, #gebruiker2, #locatie2, #artiest2 {
     display: none;
 }
+
+#submit:hover{
+    background-color: #000000;
+    color: rgb(255, 115, 0);
+    border: 2px solid var(--Wit);
+}
+
