@@ -113,8 +113,11 @@ if(isset($_POST['submit'])) {
     
   
     <a class="uitloggen" href="loguit.php">Uitloggen</a>
-    <a class="Bewerken" href="bewerken.php">Bewerken</a>
-  
+    <?php
+        if ($_SESSION['perm'] == 2) {
+            echo "<a class='Bewerken' href='bewerken.php'>Bewerken</a>";
+        }
+    ?>
   
     </section>
     <div class="box">

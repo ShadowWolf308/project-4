@@ -12,6 +12,7 @@
                     $_SESSION['ingelogd'] = true;
                     $_SESSION['username'] = trim($_POST['username']);
                     $_SESSION['id'] = (integer)$row['gebruiker_id'];
+                    $_SESSION['perm'] = (integer)$row['permission'];
                     header("location: ingelogd.php");
                 } else {
                     $error = "niet de juiste gegevens ingevuld";

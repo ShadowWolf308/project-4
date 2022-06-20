@@ -3,7 +3,7 @@
     // if ($_SESSION['ingelogd'] != true) {
     //     header("location: index.php");
     // }
-    // if ($_SESSION['perm'] != 1) {
+    // if ($_SESSION['perm'] != 2) {
     //     header("location: ingelogd.php");
     // }
     require('dbconnect.php');
@@ -184,8 +184,8 @@
                             }
                         }
                     ?>
-                </select>
-                <input type="text" name="permissions">
+                </select><br>
+                <input type="text" name="permissions"><br>
             </article>
             <article id="aanbieding">
                 <select name="aanbiedingsupdate" id="">
@@ -199,13 +199,13 @@
                             }
                         }
                     ?>
-                </select>
-                <label for="updatebegin">begindatum:</label>
-                <input type="text" name="updatebegin">
-                <label for="updateeind">einddatum:</label>
-                <input type="text" name="updateeind">
-                <label for="updateomschrijving">omschrijving:</label>
-                <input type="text" name="updateomschrijving">
+                </select><br>
+                <label for="updatebegin">begindatum:</label><br>
+                <input type="text" name="updatebegin"><br>
+                <label for="updateeind">einddatum:</label><br>
+                <input type="text" name="updateeind"><br>
+                <label for="updateomschrijving">omschrijving:</label><br>
+                <input type="text" name="updateomschrijving"><br>
             </article>
             <article id="artiest">
                 <select name="artiestupdate" id="">
@@ -219,12 +219,26 @@
                             }
                         }
                     ?>
-                </select>
+                </select><br>
+                <label for="naamupdate">artiesten naam:</label><br>
+                <input type="text" name="naamupdate" id=""><br>
+                <label for="achternaamupdate">achternaam:</label><br>
+                <input type="text" name="achternaamupdate" id=""><br>
+                <label for="voornaamupdate">voornaam:</label><br>
+                <input type="text" name="voornaamupdate" id=""><br>
+                <label for="tussenvoegselupdate">tussenvoegsels:</label><br>
+                <input type="text" name="tussenvoegselupdate" id=""><br>
+                <label for="statementupdate">statement:</label><br>
+                <input type="text" name="statementupdate" id=""><br>
+                <label for="telefoonupdate">telefoonnummer:</label><br>
+                <input type="text" name="telefoonupdate" id=""><br>
+                <label for="actiefupdate">actief &#40;alleen een 1 of een 0 invullen!&#41;:</label><br>
+                <input type="text" name="actiefupdate" id=""><br>
             </article>
             <article id="locatie">
                 <select name="locatieupdate" id="">
                     <?php
-                        $sql = "SELECT * FROM locatie";
+                        $sql = "SELECT * FROM locaties";
                         if($result = $conn->query($sql)) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<option value ".$row['locatie_id'].">";
@@ -233,55 +247,59 @@
                             }
                         }
                     ?>
-                </select>
+                </select><br>
+                <label for="plaatsnaamupdate">plaatsnaam:</label><br>
+                <input type="text" name="plaatsnaamupdate" id=""><br>
+                <label for="gebouwupdate">gebouw:</label><br>
+                <input type="text" name="gebouwupdate" id=""><br>
             </article>
         </section>
         <section id="insert">
             <article id="gebruiker1">
-                <label for="insertname">username:</label>
-                <input name="insertname" type="text">
-                <label for="insertpass">password:</label>
-                <input name="insertpass" type="text">
-                <label for="insertperm">permission level &#40;alleen een 1 en een 2 invullen!&#41;:</label>
-                <input name="insertperm" type="text">
+                <label for="insertname">username:</label><br>
+                <input name="insertname" type="text"><br>
+                <label for="insertpass">password:</label><br>
+                <input name="insertpass" type="text"><br>
+                <label for="insertperm">permission level &#40;alleen een 1 en een 2 invullen!&#41;:</label><br>
+                <input name="insertperm" type="text"><br>
             </article>
             <article id="aanbieding1">
-                <label for="inserttitel">titel:</label>
-                <input name="inserttitel" type="text">
-                <label for="insertbegindatum">begindatum:</label>
-                <input name="insertbegindatum" type="text">
-                <label for="inserteinddatum">einddatum:</label>
-                <input name="inserteinddatum" type="text">
-                <label for="insertomschrijving">omschrijving:</label>
-                <input name="insertomschrijving" type="text">
-                <label for="insertpng">png:</label>
-                <input name="insertpng" type="text">
+                <label for="inserttitel">titel:</label><br>
+                <input name="inserttitel" type="text"><br>
+                <label for="insertbegindatum">begindatum:</label><br>
+                <input name="insertbegindatum" type="text"><br>
+                <label for="inserteinddatum">einddatum:</label><br>
+                <input name="inserteinddatum" type="text"><br>
+                <label for="insertomschrijving">omschrijving:</label><br>
+                <input name="insertomschrijving" type="text"><br>
+                <label for="insertpng">png:</label><br>
+                <input name="insertpng" type="text"><br>
             </article>
             <article id="artiest1">
-                <label for="insertnaam">naam:</label>
-                <input name="insertnaam" type="text">
-                <label for="insertachternaam">achternaam:</label>
-                <input name="insertachternaam" type="text">
-                <label for="insertvoornaam">voornaam:</label>
-                <input name="insertvoornaam" type="text">
-                <label for="inserttussen">tussenvoegsels:</label>
-                <input name="inserttussen" type="text">
-                <label for="insertstatement">statement:</label>
-                <input name="insertstatement" type="text">
-                <label for="inserttelefoon">telefoonnummer:</label>
-                <input name="inserttelefoon" type="text">
-                <label for="insertactief">actief &#40;alleen een 0 of een 1 invullen!&#41;:</label>
-                <input name="insertactief" type="text">
+                <label for="insertnaam">naam:</label><br>
+                <input name="insertnaam" type="text"><br>
+                <label for="insertachternaam">achternaam:</label><br>
+                <input name="insertachternaam" type="text"><br>
+                <label for="insertvoornaam">voornaam:</label><br>
+                <input name="insertvoornaam" type="text"><br>
+                <label for="inserttussen">tussenvoegsels:</label><br>
+                <input name="inserttussen" type="text"><br>
+                <label for="insertstatement">statement:</label><br>
+                <input name="insertstatement" type="text"><br>
+                <label for="inserttelefoon">telefoonnummer:</label><br>
+                <input name="inserttelefoon" type="text"><br>
+                <label for="insertactief">actief &#40;alleen een 0 of een 1 invullen!&#41;:</label><br>
+                <input name="insertactief" type="text"><br>
             </article>
             <article id="locatie1">
-                <label for="insertplaatsnaam">plaatsnaam:</label>
-                <input name="insertplaatsnaam" type="text">
-                <label for="insertgebouw">gebouw:</label>
-                <input name="insertgebouw" type="text">
-                <label for="insertadres">adres:</label>
-                <input name="insertadres" type="text">
-                <label for="insertpost">postcode:</label>
-                <input name="insertpost" type="text">
+                <label for="insertplaatsnaam">plaatsnaam:</label><br>
+                <input name="insertplaatsnaam" type="text"><br>
+                <label for="insertgebouw">gebouw:</label><br>
+                <input name="insertgebouw" type="text"><br>
+                <label for="insertadres">adres:</label><br>
+                <input name="insertadres" type="text"><br>
+                <label for="insertpost">postcode:</label><br>
+                <input name="insertpost" type="text"><br>
             </article>
         </section>
         <section id="delete">
