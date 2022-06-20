@@ -90,8 +90,8 @@ a:hover{
     position: absolute;
     margin-left: 2.5%;
     margin-top: 7%;
-    background-color: #014c0bbc;
-    border: #000000 solid ; 
+    background-color: #000000bc;
+    border: #52643c solid ; 
     width: 25vw;
     padding-left: 35vw ;
     padding-right: 35vw ;
@@ -243,3 +243,37 @@ a:hover{
     border: 2px solid #ffffff;
     border-radius: 20ch;
   }
+
+
+  .main-footer{
+    position: absolute;
+    margin-top: 45vw;
+    padding-left: 15em;
+    padding-right: 15em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+
+.main-footer > article > p{
+    font-size: 1em;
+    color: var(--Wit);
+}
+
+.main-footer >article > h{
+    font-weight: bold;
+    color: var(--Wit);
+
+}
+
+.main-footer >article >p> h{
+    font-weight: bold;
+}

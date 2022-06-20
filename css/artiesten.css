@@ -90,3 +90,36 @@ table {
     width: 82vw;
 }
  
+
+.main-footer{
+    position: absolute;
+    margin-top: 42vw;
+    padding-left: 15em;
+    padding-right: 15em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+
+.main-footer > article > p{
+    font-size: 1em;
+    color: var(--Wit);
+}
+
+.main-footer >article > h{
+    font-weight: bold;
+    color: var(--Wit);
+
+}
+
+.main-footer >article >p> h{
+    font-weight: bold;
+}
