@@ -116,6 +116,14 @@ form {
     height: 30px;
     border-radius: 15px;
     font-size: 16px;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #000000;
+    border-radius: 20ch;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 
 p {
@@ -123,17 +131,11 @@ p {
     font-size: 20px;
 }
 
-
-
-input[type=submit]:hover{
+#submit:hover{
     background: #000000;
     color: rgb(255, 115, 0);
 }
 
-.submit:hover{
-    background: #000000;
-    color: rgb(255, 115, 0);
-}
 
 .main-footer{
     margin-top: 8vw;

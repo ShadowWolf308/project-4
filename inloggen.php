@@ -82,11 +82,11 @@
     <form method="POST">
         <input type="text" name="username" required placeholder="vul hier je username in">
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
-        <input type="submit" value="log in" name="submit">
+        <input type="submit" value="log in" name="submit" id="submit">
         <p id='error'> <?php echo $error ?> </p>
     </form> <br> <br> <br>
     <p>Nog geen account?</p>
-    <a class="maakacc" href="registreren.php">Maak een account aan</a>
+    <a class="maakacc" href="registreren.php" id ="submit">Maak een account aan</a>
     </section>
     <footer class="main-footer">
 
