@@ -85,7 +85,76 @@ if(isset($_POST['submit'])) {
         </nav>
         <div></div>
     </header>
-    <footer class="main-footer">
+    
+
+    <section class="echoname">
+    <img class="actie" src="images/cheap.png" alt="Logo">
+    <h1>
+    <?php
+    echo "Welkom ".$_SESSION['username'];
+    ?>  
+    </h1>
+
+
+    <form method="POST">
+        <label for="Wachtwoord"> Oude Wachtwoord:</label><br>
+        <input type="password" class="Wachtwoord" name="WWoud" required><br>
+        <label for="Wachtwoord"> Nieuwe Wachtwoord:</label><br>
+        <input type="password" class="Wachtwoord" name="WWnieuw" required><br>
+        <label for="Wachtwoord">Herhaal Nieuwe wachtwoord:</label><br>
+        <input type="password" class="Wachtwoord" name="WWherhaal" required> <br> <br>
+        <input id="aanpassen" type="submit" value="Aanpassen" name="submit"><br>
+        <?php echo $error ?>
+    </form>
+
+    <p> Dit is jouw persoonlijke pagina. <br> 
+    Hier kunt u aanbiedingen zien speciaal voor u! <br>
+    Klik op de knop hieronder om uw speciale aanbieding te claimen
+    
+
+    <div class="box">
+	    <a class="button" href="#popup1">Toon uw persoonlijke aanbieding</a>
+    </div>
+  
+    <a class="uitloggen" href="loguit.php">Uitloggen</a>
+    <?php
+        if ($_SESSION['perm'] == 2) {
+            echo "<a class='Bewerken' href='bewerken.php'>Bewerken</a>";
+        }
+    ?>
+  
+    </section>
+    
+    <div id="popup1" class="overlay">
+        <div class="popup">
+        Scan deze code bij de bar voor uw kortingscode!
+            <a class="close" href="#">&times;</a>
+            <div class="content">
+              
+                <span id="text"></span>
+                <button id="mandje">Kopieer uw code</button>
+            </div>
+        </div>
+    </div>
+    <script>
+    var copy = "";
+    function makeid(length) {
+        var result = '';
+        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        document.getElementById('text').innerHTML=result;
+        copy = result;
+    }
+    makeid(7);
+    document.getElementById('mandje').addEventListener('click',function() {
+    navigator.clipboard.writeText(copy);
+    alert('Uw code is gekopieerd.');
+    });
+    </script>
+   <footer class="main-footer">
 
 <article class="f-txt1">
 <h>TIGER</h>
@@ -116,73 +185,6 @@ if(isset($_POST['submit'])) {
 </section>
 </footer>
     </section>
-
-    <section class="echoname">
-    <img class="actie" src="images/cheap.png" alt="Logo">
-    <h1>
-    <?php
-    echo "Welkom ".$_SESSION['username'];
-    ?>  
-    </h1>
-
-
-    <form method="POST">
-        <label for="Wachtwoord"> Oude Wachtwoord:</label><br>
-        <input type="password" class="Wachtwoord" name="WWoud" required><br>
-        <label for="Wachtwoord"> Nieuwe Wachtwoord:</label><br>
-        <input type="password" class="Wachtwoord" name="WWnieuw" required><br>
-        <label for="Wachtwoord">Herhaal Nieuwe wachtwoord:</label><br>
-        <input type="password" class="Wachtwoord" name="WWherhaal" required> <br> <br>
-        <input id="aanpassen" type="submit" value="Aanpassen" name="submit"><br>
-        <?php echo $error ?>
-    </form>
-
-    <p> Dit is jouw persoonlijke pagina. <br> 
-    Hier kunt u aanbiedingen zien speciaal voor u! <br>
-    Klik op de knop hieronder om uw speciale aanbieding te claimen
-    
-  
-    <a class="uitloggen" href="loguit.php">Uitloggen</a>
-    <?php
-        if ($_SESSION['perm'] == 2) {
-            echo "<a class='Bewerken' href='bewerken.php'>Bewerken</a>";
-        }
-    ?>
-  
-    </section>
-    <div class="box">
-	    <a class="button" href="#popup1">Toon uw persoonlijke aanbieding</a>
-    </div>
-    <div id="popup1" class="overlay">
-        <div class="popup">
-        Scan deze code bij de bar voor uw kortingscode!
-            <a class="close" href="#">&times;</a>
-            <div class="content">
-              
-                <span id="text"></span>
-                <button id="mandje">Kopieer uw code</button>
-            </div>
-        </div>
-    </div>
-    <script>
-    var copy = "";
-    function makeid(length) {
-        var result = '';
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        var charactersLength = characters.length;
-        for ( var i = 0; i < length; i++ ) {
-        result += characters.charAt(Math.floor(Math.random() * charactersLength));
-        }
-        document.getElementById('text').innerHTML=result;
-        copy = result;
-    }
-    makeid(7);
-    document.getElementById('mandje').addEventListener('click',function() {
-    navigator.clipboard.writeText(copy);
-    alert('Uw code is gekopieerd.');
-    });
-    </script>
-    <footer>
 
 
     <!--linking a .js file-->
