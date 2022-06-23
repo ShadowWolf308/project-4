@@ -12,6 +12,7 @@
                     $_SESSION['ingelogd'] = true;
                     $_SESSION['username'] = trim($_POST['username']);
                     $_SESSION['id'] = (integer)$row['gebruiker_id'];
+                    $_SESSION['perm'] = (integer)$row['permission'];
                     header("location: ingelogd.php");
                 } else {
                     $error = "niet de juiste gegevens ingevuld";
@@ -81,16 +82,43 @@
     <form method="POST">
         <input type="text" name="username" required placeholder="vul hier je username in">
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in">
-        <input type="submit" value="log in" name="submit">
-        <?php echo $error ?>
+        <input type="submit" value="log in" name="submit" id="submit">
+        <p id='error'> <?php echo $error ?> </p>
     </form> <br> <br> <br>
     <p>Nog geen account?</p>
-    <a class="maakacc" href="registreren.php">Maak een account aan</a>
+    <a class="maakacc" href="registreren.php" id ="submit">Maak een account aan</a>
     </section>
-    <footer>
-        <!--footer data-->
+    <footer class="main-footer">
 
-    </footer>
+<article class="f-txt1">
+<h>TIGER</h>
+<p>Plein 16</p>
+<p>2363</p>
+<p>Zuid-Holland</p>
+</article>
+
+<article class="f-txt2">
+<p>Tel. 123-456-789</p>
+<p>Mail. contact@tiger.nl</p>
+</article>
+
+<article class="f-txt3">
+<h>Werktijden</h>
+<p>Werktijden Ma - Vr: 09:00 - 17:00</p>
+<p>Weekend gesloten</p>
+</article>
+
+<article class="f-txt4">
+<p>Copyright 2022 · Alle rechten voorbehouden · </p>
+<p>Algemene Voorwaarden · Privacyverklaring</p>
+</article>
+
+<article class="f-txt5">
+<p>Ontwikkeling door: <h>Tom Groenheide en diede</h></p>
+</article>
+</section>
+</footer>
+    </section>
     <!--linking a .js file-->
     <script src="" type="text/javascript"></script>
 </body>

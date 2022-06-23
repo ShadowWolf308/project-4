@@ -29,6 +29,7 @@
                                 $_SESSION['ingelogd'] = true;
                                 $_SESSION['username'] = trim($_POST['username']);
                                 $_SESSION['id'] = (integer)$row['gebruiker_id'];
+                                $_SESSION['perm'] = (integer)$row['permission'];
                                 header("location: ingelogd.php");
                             }
                         }
@@ -106,18 +107,47 @@
         <input type="password" name="password" required placeholder="vul hier je wachtwoord in"> <br>
         <input type="password" name="passwordcheck" required placeholder="vul hier je wachtwoord nog een keer in"> <br>
         <input type="submit" value="registreer" name="submit">
-        <?php echo $error ?>
+        
+        <p id='error'> <?php echo $error ?> </p>
     </form> <br> <br>
     <section class="alacc">
-    <p>Heb je al een account?</p>
+    <p class="p2">Heb je al een account?</p>
     <a class="inlog" href="inloggen.php">Log In</a>
     </section>
     </section>
 
-    <footer>
-        <!--footer data-->
+    <footer class="main-footer">
 
-    </footer>
+<article class="f-txt1">
+<h>TIGER</h>
+<p>Plein 16</p>
+<p>2363</p>
+<p>Zuid-Holland</p>
+</article>
+
+<article class="f-txt2">
+<p>Tel. 123-456-789</p>
+<p>Mail. contact@tiger.nl</p>
+</article>
+
+<article class="f-txt3">
+<h>Werktijden</h>
+<p>Werktijden Ma - Vr: 09:00 - 17:00</p>
+<p>Weekend gesloten</p>
+</article>
+
+<article class="f-txt4">
+<p>Copyright 2022 · Alle rechten voorbehouden · </p>
+<p>Algemene Voorwaarden · Privacyverklaring</p>
+</article>
+
+<article class="f-txt5">
+<p>Ontwikkeling door: <h>Tom Groenheide en diede</h></p>
+</article>
+</section>
+</footer>
+    </section>
+
     <!--linking a .js file-->
     <script src="" type="text/javascript"></script>
 </body>

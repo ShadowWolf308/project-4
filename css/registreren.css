@@ -99,7 +99,7 @@ input{
     margin-left: 13vw;
 }
 
-p{
+.p2{
     font-size: smaller;
     margin-left: -17vw;
     margin-bottom: -3vh;
@@ -154,4 +154,45 @@ input[type=submit]:hover{
     top: 10vw;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
+}
+
+
+
+#error{
+    color: white;
+    margin-left: 0.1vw;
+    font-size: smaller;
+}
+
+.main-footer{
+    position: absolute;
+    margin-top: 8vw;
+    padding-left: 15em;
+    padding-right: 15em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+
+.main-footer > article > p{
+    font-size: 1em;
+    color: var(--Wit);
+}
+
+.main-footer >article > h{
+    font-weight: bold;
+    color: var(--Wit);
+
+}
+
+.main-footer >article >p> h{
+    font-weight: bold;
 }

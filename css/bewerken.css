@@ -50,7 +50,6 @@ a{
     font-size: 14px;
     padding: 0 10px;
     font-weight: bold;
-
 }
 
 a::after{
@@ -72,26 +71,50 @@ a:hover{
     color: var(--MainColor);
 }
 /* <---------Eind Header---------> */
-td, th {
-    border: #000000 2px solid;
-    color: #fff;
-    background-color: #33513eda;
+
+form {
+    margin-top: calc(40vh - 108px);
+    margin-left: calc(50vw - 225px);
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    width: 450px;
+    border-radius: 15px;
+    padding: 2px 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#submit {
+    display: flex;
+    color: var(--Zwart);
+    width: 50%;
     text-align: center;
+    justify-content: center;
+    margin-left: 25%;
+    height: 30px;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: all 0.3s ease-out;
 }
-th {
-    background-color: #33512eed;
-    font-size: 18px;
+
+label, p {
+    color: var(--Wit);
+    font-size: 17px;
 }
-table {
-    position: absolute;
-    left: 9vw;
-    top: 9vh;
-    height: 82vh;
-    width: 82vw;
+
+#update, #delete, #aanbieding, #gebruiker, #locatie, #artiest, #aanbieding1, #locatie1, #artiest1, #aanbieding2, #gebruiker2, #locatie2, #artiest2 {
+    display: none;
+}
+
+#submit:hover{
+    background-color: #000000;
+    color: rgb(255, 115, 0);
+    border: 2px solid var(--Wit);
 }
 
 .main-footer{
-    margin-top: 50vw;
+    position: absolute;
+    margin-top: 2vw;
     padding-left: 15em;
     padding-right: 15em;
     display: flex;
@@ -121,3 +144,4 @@ table {
 .main-footer >article >p> h{
     font-weight: bold;
 }
+

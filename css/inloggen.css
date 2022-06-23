@@ -5,7 +5,7 @@
     src: url(../fonts/OPTICopperplate.otf);
 }
 
-:root{
+:root {
     --MainColor: #EF7123;
     --Wit: #ffffff;
     --Zwart: #000;
@@ -15,35 +15,35 @@
 
 /* <---------Alles voor de header---------> */
 
-*{
+* {
     font-family: "copperplate";
     margin: 0;
     padding: 0;
 }
 
-html{
+html {
     background-image: url(../images/tiger_background.png);
     background-size: cover;
 }
 
-header{
+header {
     display: grid;
     grid-template-columns: 0.2fr 2fr 5.5fr 0.2fr;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-img{
+img {
     height: 60px;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
     column-gap: 1em;
 }
 
-nav a{
+nav a {
     position: relative;
     text-decoration: none;
     color: var(--Wit);
@@ -53,7 +53,7 @@ nav a{
 
 }
 
-nav a::after{
+nav a::after {
     content: "";
     position: absolute;
     background-color: var(--MainColor);
@@ -64,16 +64,17 @@ nav a::after{
     transition: 0.3s;
 }
 
-nav a:hover:after{
+nav a:hover:after {
     width: 100%;
 }
 
-nav a:hover{
+nav a:hover {
     color: var(--MainColor);
 }
+
 /* <---------Eind Header---------> */
 
-.login{
+.login {
     left: 39vw;
     width: 22vw;
     border-radius: 15px;
@@ -83,19 +84,19 @@ nav a:hover{
     margin-top: 12vh;
     padding-bottom: 5vh;
     background-color: #00000088;
-    border: #000000 solid; 
+    border: #000000 solid;
 }
 
-input{
+input {
     margin-top: 6vh;
     border-radius: 15px;
     padding: 10px;
 }
 
 
-.maakacc{
+.maakacc {
     font-size: small;
-     margin-top: -0.3vh;
+    margin-top: -0.3vh;
     margin-left: 2vw;
     position: absolute;
     padding: 5px;
@@ -105,11 +106,61 @@ input{
     border-radius: 20ch;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-out;   
+    transition: all 0.3s ease-out;
 }
 
-p{
+p {
     font-size: small;
     color: white;
     margin-left: 3vw;
+}
+
+#error {
+    color: white;
+    margin-left: 0.1vw;
+    font-size: smaller;
+}
+
+.main-footer {
+    position: absolute;
+    margin-top: 15.1vw;
+    padding-left: 15em;
+    padding-right: 15em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+
+.main-footer>article>p {
+    font-size: 1em;
+    color: var(--Wit);
+}
+
+.main-footer>article>h {
+    font-weight: bold;
+    color: var(--Wit);
+
+}
+
+.main-footer>article>p>h {
+    font-weight: bold;
+}
+
+
+
+#submit {
+    transition: all 0.3s ease-out;
+}
+
+#submit:hover {
+    background: #000000;
+    color: rgb(255, 115, 0);
 }

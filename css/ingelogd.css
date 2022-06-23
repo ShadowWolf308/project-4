@@ -88,11 +88,10 @@ a:hover{
     color: #ffffff;
     font-size: larger;
     position: absolute;
-    margin-left: 2.5%;
-    margin-top: 7%;
-    background-color: #014c0bbc;
-    opacity: 80%;
-    border: #000000 solid ; 
+    margin-left: 1.8%;
+    margin-top: 4%;
+    background-color: #000000bc;
+    border: #52643c solid ; 
     width: 25vw;
     padding-left: 35vw ;
     padding-right: 35vw ;
@@ -114,8 +113,8 @@ a:hover{
     text-decoration: none;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    margin-top: 70vh;
-    margin-left: 35vw;
+    margin-top: 20vh;
+    margin-left: -5vw;
   }
   .button:hover {
     background: #000000;
@@ -208,7 +207,7 @@ a:hover{
   .uitloggen{
     position: absolute;
     margin-left: 40vw;
-    margin-top: 27vh;
+    margin-top: 22vh;
     border: 2px solid #ffffff;
     border-radius: 20ch;
   }
@@ -240,7 +239,41 @@ a:hover{
   .Bewerken{
     position: absolute;
     margin-left: 30vw;
-    margin-top: 27vh;
+    margin-top: 22vh;
     border: 2px solid #ffffff;
     border-radius: 20ch;
   }
+
+
+  .main-footer{
+    position: absolute;
+    margin-top: 45vw;
+    padding-left: 15em;
+    padding-right: 15em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    background-color: rgba(0, 0, 0, 0.6);
+    align-items: center;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: left;
+    font-size: 12px;
+}
+
+
+
+.main-footer > article > p{
+    font-size: 1em;
+    color: var(--Wit);
+}
+
+.main-footer >article > h{
+    font-weight: bold;
+    color: var(--Wit);
+
+}
+
+.main-footer >article >p> h{
+    font-weight: bold;
+}
