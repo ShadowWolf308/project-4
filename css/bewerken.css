@@ -97,7 +97,7 @@ form {
     transition: all 0.3s ease-out;
 }
 
-label {
+label, p {
     color: var(--Wit);
     font-size: 17px;
 }
