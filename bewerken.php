@@ -38,13 +38,24 @@
                 } 
             }
             if ($_POST['selecttable'] == "artiesten") {
-                $sql = "";
+                $naam = safe($_Post['insertnaam']);
+                $achternaam = safe($_Post['insertachternaam']);
+                $voornaam = safe($_Post['insertvoornaam']);
+                $tussenvoegsel = safe($_Post['inserttussenvoegsel']);
+                $statement = safe($_Post['insertstatement']);
+                $telefoon = safe($_Post['inserttelefoon']);
+                $actief = safe($_Post['insertactief']);
+                $sql = "INSERT INTO artiesten (naam,achternaam,voornaam,tussenvoegsel,`statement`,telefoon,actief) VALUES (".$naam.",".$achternaam.",".$voornaam.",".$tussenvoegsel.",".$statement.",".$telefoon.",".$actief.")";
                 if ($result = $conn->query($sql)) {
                     $error = "toe gevoegt!";
                 } 
             }
             if ($_POST['selecttable'] == "locaties") {
-                $sql = "";
+                $plaatsnaam = safe($_Post['insertplaatsnaam']);
+                $gebouw = safe($_Post['insertgebouw']);
+                $adres = safe($_Post['insertadres']);
+                $postcode = safe($_Post['insertpostcode']);
+                $sql = "INSERT INTO locaties (plaatsnaam,gebouw,adres,postcode) VALUES (".$plaatsnaam.",".$gebouw.",".$adres.",".$postcode.")";
                 if ($result = $conn->query($sql)) {
                     $error = "toe gevoegt!";
                 } 
@@ -52,25 +63,40 @@
         }
         else if ($_POST['select'] == "update") {
             if ($_POST['selecttable'] == "gebruiker") {
-                $sql = "";
+                $perm = safe($_POST['permissions']);
+                $sql = "UPDATE `gebruikers` SET `permission`='".$perm."' WHERE `username` = ".$_POST['gebruikersupdate'];
                 if ($result = $conn->query($sql)) {
                     $error = "geupdate!";
                 } 
             }
             if ($_POST['selecttable'] == "aanbieding") {
-                $sql = "";
+                $begin = safe($_POST['updatebegin']);
+                $eind = safe($_POST['updateeind']);
+                $omschrijf = safe($_POST['updateomschrijving']);
+                $sql = "UPDATE `aanbiedingen` SET `begindatum` = '".$begin."', `einddatum` = '".$eind."', `omschrijving` = '".$omschrijf."' `WHERE titel` = ".$_POST['aanbiedingsupdate'];
                 if ($result = $conn->query($sql)) {
                     $error = "geupdate!";
                 } 
             }
             if ($_POST['selecttable'] == "artiesten") {
-                $sql = "";
+                $naam = safe($_POST['naamupdate']);
+                $achternaam = safe($_POST['achternaamupdate']);
+                $voornaam = safe($_POST['voornaamupdate']);
+                $tussen = safe($_POST['tussenvoegselupdate']);
+                $state = safe($_POST['statementupdate']);
+                $telefoon = safe($_POST['telefoonupdate']);
+                $actief = safe($_POST['actiefupdate']);
+                $sql = "UPDATE `artiesten` SET `naam` = '".$naam."', `achternaam` = '".$achternaam."', `voornaam` = '".$voornaam."', `tussenvoegsel` = '".$tussen."', `statement` = '".$state."', `telefoon` = '".$telefoon."', `actief` = '".$actief."' WHERE artiest_id =".$_POST['artiestupdate'];
                 if ($result = $conn->query($sql)) {
                     $error = "geupdate!";
                 } 
             }
             if ($_POST['selecttable'] == "locaties") {
-                $sql = "";
+                $gebouw = safe($_POST['gebouwupdate']);
+                $plaats = safe($_POST['plaatsnaamupdate']);
+                $post = safe($_POST['postupdate']);
+                $adres = safe($_POST['adresupdate']);
+                $sql = "UPDATE locaties SET `gebouw` = '".$gebouw."', `plaatsnaam` = '".$plaats."', `postcode` = '".$post."', `adres` = '".$adres."' WHERE locatie_id = ".$_POST['locatieupdate'];
                 if ($result = $conn->query($sql)) {
                     $error = "geupdate!";
                 } 
@@ -171,6 +197,7 @@
             <option value="artiesten">artiesten</option>
             <option value="locaties">locaties</option>
         </select>
+        <p>VUL ALTIJD ALLES IN!</p><br><br>
         <section id="update">
             <article id="gebruiker">
                 <select name="gebruikersupdate" id="">
@@ -252,6 +279,10 @@
                 <input type="text" name="plaatsnaamupdate" id=""><br>
                 <label for="gebouwupdate">gebouw:</label><br>
                 <input type="text" name="gebouwupdate" id=""><br>
+                <label for="postupdate">postcode:</label><br>
+                <input type="text" name="postupdate" id=""><br>
+                <label for="adresupdate">adres:</label><br>
+                <input type="text" name="adresupdate" id=""><br>
             </article>
         </section>
         <section id="insert">
