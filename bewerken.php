@@ -395,9 +395,40 @@
         <?php echo $error ?>
     </form>
     <footer>
-        <!--footer data-->
 
+    <footer class="main-footer">
+
+<article class="f-txt1">
+    <h>TIGER</h>
+    <p>Plein 16</p>
+    <p>2363</p>
+    <p>Zuid-Holland</p>
+</article>
+
+<article class="f-txt2">
+    <p>Tel. 123-456-789</p>
+    <p>Mail. contact@tiger.nl</p>
+</article>
+
+<article class="f-txt3">
+    <h>Werktijden</h>
+    <p>Werktijden Ma - Vr: 09:00 - 17:00</p>
+    <p>Weekend gesloten</p>
+</article>
+
+<article class="f-txt4">
+    <p>Copyright 2022 · Alle rechten voorbehouden · </p>
+    <p>Algemene Voorwaarden · Privacyverklaring</p>
+</article>
+
+<article class="f-txt5">
+    <p>Ontwikkeling door: <h>Tom, Diede, Levy, Ryan</h></p>
+</article>
+</section>
+</footer>
+        </section>
     </footer>
+
     <!--linking a .js file-->
     <script>
         function select_change() {
