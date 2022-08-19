@@ -8,12 +8,11 @@
                     $data = trim($data);
                     $data = stripslashes($data);
                     $data = htmlspecialchars($data);
+                    $data = $conn->real_escape_string($data);
                     return $data;
                 }
                 $user = safe($_POST['username']);
-                $user = $conn->real_escape_string($user);
                 $pass = safe($_POST['password']);
-                $pass = $conn->real_escape_string($pass);
                 $sql = "SELECT * FROM gebruikers WHERE username = '".$user."'";
                 if ($result = $conn->query($sql)) {
                     $aantal = $result->num_rows;
